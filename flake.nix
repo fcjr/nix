@@ -7,17 +7,25 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    nix-vscode-extensions.inputs.nixpkgs.follows = "nixpkgs";
+
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager, nix-vscode-extensions }:
   let
     configuration = { pkgs, config, ... }: {
 
       nixpkgs.config.allowUnfree = true;
+
+      users.users.fcjr = {
+        name = "fcjr";
+        home = "/Users/fcjr";
+      };
 
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
@@ -29,6 +37,36 @@
 
           wezterm
           obsidian
+
+          (vscode-with-extensions.override {
+            vscodeExtensions = 
+              with nix-vscode-extensions.extensions.${system}.vscode-marketplace;
+              [
+                golang.go
+                eamodio.gitlens
+                continue.continue
+                saoudrizwan.claude-dev
+                rust-lang.rust-analyzer
+                vadimcn.vscode-lldb
+                sswg.swift-lang
+                msjsdiag.vscode-react-native
+                platformio.platformio-ide
+                catppuccin.catppuccin-vsc-pack
+                ms-vscode-remote.vscode-remote-extensionpack
+                editorconfig.editorconfig
+                bierner.markdown-mermaid
+                bbenoist.nix
+                yoavbls.pretty-ts-errors
+                quick-lint.quick-lint-js
+                mikestead.dotenv
+                johnpapa.vscode-cloak
+                bradlc.vscode-tailwindcss
+                austenc.tailwind-docs
+                tamasfe.even-better-toml
+                tauri-apps.tauri-vscode
+                hashicorp.terraform
+              ];
+            })
         ];
 
       homebrew = {

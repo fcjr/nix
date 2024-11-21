@@ -57,6 +57,12 @@
           ## proxmarke
           [[ ! -f ~/git/proxmark3 ]] || export PATH=$PATH:~/git/proxmark3
 
+          ## FNM (Node Manager)
+          eval "$(fnm env)"
+
+          ## The Fuck
+          eval $(thefuck --alias)
+
           ## Auto FNM
           autoload -U add-zsh-hook
           # place default node version under $HOME/.node_version

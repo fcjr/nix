@@ -3,12 +3,17 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager }:
   let
     configuration = { pkgs, config, ... }: {
 
@@ -16,30 +21,36 @@
 
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
-      environment.systemPackages =
+      environment.systemPackages = with pkgs;
         [ 
-          pkgs.mkalias
-          pkgs.neovim
-          pkgs.tmux
+          mkalias
+          neovim
+          tmux
 
-          pkgs.wezterm
-          pkgs.obsidian
+          wezterm
+          obsidian
         ];
 
       homebrew = {
         enable = true;
-	brews = [
+	      brews = [
           "mas"
-	];
-	casks = [
+	      ];
+	      casks = [
           "firefox@developer-edition"   
-	];
+	      ];
         masApps = {
-	  "Bitwarden" = 1352778147;
-	  "Pure Paste" = 1611378436;
-	};
+	        "Bitwarden" = 1352778147;
+	        "Pure Paste" = 1611378436;
+	      };
         onActivation.cleanup = "zap";
+	      onActivation.autoUpdate = true;
+	      onActivation.upgrade = true;
       };
+
+      fonts.packages = [
+        (pkgs.nerdfonts.override { fonts = [ "Meslo" ]; })
+      ];
 
       system.activationScripts.applications.text = let
         env = pkgs.buildEnv {
@@ -61,11 +72,36 @@
         done
             '';
 
+      system.defaults = {
+	      dock.persistent-apps = [
+          "/Applications/Safari.app"
+          "/Applications/Firefox Developer Edition.app"
+          "/System/Applications/Messages.app"
+          "${pkgs.vscode}/Applications/Visual Studio Code.app"
+          "${pkgs.obsidian}/Applications/Obsidian.app"
+          "${pkgs.wezterm}/Applications/WezTerm.app"
+          "/System/Applications/Notes.app"
+          "/System/Applications/System Settings.app"
+        ];
+        dock.show-recents = false;
+        dock.persistent-others = [
+          "~/Applications"
+	        "/Users/fcjr/Downloads"
+	      ];
+        finder.FXPreferredViewStyle = "clmv";
+        loginwindow.GuestEnabled = false;
+        NSGlobalDomain.AppleInterfaceStyle= "Dark";
+	      NSGlobalDomain.KeyRepeat = 2;
+      };
+      system.keyboard.enableKeyMapping = true;
+			system.keyboard.remapCapsLockToControl = true;
+
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
       # Explicitly enable zsh shell support in nix-darwin.
       programs.zsh.enable = true;
+      programs.zsh.enableCompletion = true;
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -80,16 +116,21 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#simple
+    # $ darwin-rebuild build --flake .#default
     darwinConfigurations."default" = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
         nix-homebrew.darwinModules.nix-homebrew {
           nix-homebrew = {
             enable = true;
-	    user   = "fcjr";
+	          user   = "fcjr";
           };
-	}
+	      }
+        home-manager.darwinModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.fcjr = import ./home.nix;
+        }
       ];
     };
 

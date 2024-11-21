@@ -96,7 +96,23 @@
           "mas"
 	      ];
 	      casks = [
-          "firefox@developer-edition"   
+          "firefox@developer-edition"
+          "xcodes"
+          "android-studio"
+          "tailscale"
+          "protonvpn"
+          "proton-drive"
+          "raycast"
+          "hoppscotch"
+          "imageoptim"
+          "displaylink"
+          "jordanbaird-ice"
+          "bambu-studio"
+
+          "signal"
+          "slack"
+          "discord"
+          "zoom"
 	      ];
         masApps = {
 	        "Bitwarden" = 1352778147;
@@ -156,6 +172,9 @@
 			system.keyboard.remapCapsLockToControl = true;
 
       security.pam.enableSudoTouchIdAuth = true;
+
+      system.defaults.controlcenter.BatteryShowPercentage = true;
+      system.defaults.controlcenter.Bluetooth = true;
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";

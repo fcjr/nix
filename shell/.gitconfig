@@ -1,0 +1,45 @@
+[user]
+    name = Frank Chiarulli Jr.
+    email = frank@frankchiarulli.com
+[alias]
+    aa = add --all
+    aad = add --all --dry-run
+    mdr = merge --no-ff --no-commit
+    pushup = push --set-upstream origin HEAD
+    ci = commit -v
+    ca = commit --amend
+    ac = add -- all && commit -v
+    st = status
+    co = checkout
+    br = branch
+    cb = checkout -b
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    pom = push origin master
+    lg = !git --no-pager log --oneline -n 10 --graph --decorate
+    blg = !git --no-pager log --oneline -n 20 --graph --decorate
+    alg = !git log --color=always --oneline --graph --all --decorate | less -r
+    d = diff
+    dc = diff --cached
+    s = status
+    b = branch
+    l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+    undome = commit -am 'undo me'
+    undo = reset HEAD~1
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+    required = true
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+[color]
+	branch = auto
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[includeIf "gitdir/i:~/work/"]
+	path = .work.gitconfig

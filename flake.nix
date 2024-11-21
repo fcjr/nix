@@ -25,23 +25,26 @@
       users.users.fcjr = {
         name = "fcjr";
         home = "/Users/fcjr";
+        shell = pkgs.zsh;
       };
 
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs;
-        [ 
+        [           
           mkalias
           neovim
           tmux
           git
           ripgrep
-          zoxide
           fzf
           gh
           wget
           thefuck
           fnm
+          
+          yabai
+          skhd
 
           platformio
           avrdude
@@ -90,10 +93,14 @@
             })
         ];
 
+      services.yabai.enable = false;
+      services.skhd.enable = true;
+
       homebrew = {
         enable = true;
 	      brews = [
           "mas"
+
 	      ];
 	      casks = [
           "firefox@developer-edition"
@@ -180,8 +187,10 @@
       nix.settings.experimental-features = "nix-command flakes";
 
       # Explicitly enable zsh shell support in nix-darwin.
+      environment.shells = with pkgs; [ zsh ];
       programs.zsh.enable = true;
       programs.zsh.enableCompletion = true;
+
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;

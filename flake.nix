@@ -1,5 +1,5 @@
 {
-  description = "Fcjr's nix-darwin system flake";
+  description = "fcjr's nix-darwin system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -61,6 +61,7 @@
           ollama
           wezterm
           obsidian
+          spotify
 
           (vscode-with-extensions.override {
             vscodeExtensions = 
@@ -98,11 +99,10 @@
 
       homebrew = {
         enable = true;
-	      brews = [
+        brews = [
           "mas"
-
-	      ];
-	      casks = [
+        ];
+        casks = [
           "firefox@developer-edition"
           "xcodes"
           "android-studio"
@@ -114,20 +114,30 @@
           "imageoptim"
           "displaylink"
           "jordanbaird-ice"
+          "mist"
+
           "bambu-studio"
+          "prusaslicer"
+          "xtool-creative-space"
 
           "signal"
           "slack"
           "discord"
           "zoom"
-	      ];
+
+          "steam"
+        ];
         masApps = {
-	        "Bitwarden" = 1352778147;
-	        "Pure Paste" = 1611378436;
-	      };
+          "Bitwarden" = 1352778147;
+          "Pure Paste" = 1611378436;
+          "AdGuard for Safari" = 1440147259;
+          "SponsorBlock for Safari" = 1573461917;
+          "Kagi for Safari" = 1622835804;
+          "UTM Virtual Machines" = 1538878817;
+        };
         onActivation.cleanup = "zap";
-	      onActivation.autoUpdate = true;
-	      onActivation.upgrade = true;
+        onActivation.autoUpdate = true;
+        onActivation.upgrade = true;
       };
 
       fonts.packages = [
@@ -155,11 +165,14 @@
             '';
 
       system.defaults = {
-	      dock.persistent-apps = [
+        dock.persistent-apps = [
           "/Applications/Safari.app"
           "/Applications/Firefox Developer Edition.app"
           "/System/Applications/Messages.app"
+          "/Applications/Signal.app"
+          "/Applications/Slack.app"
           "${pkgs.vscode}/Applications/Visual Studio Code.app"
+          "/Applications/Xcode.app"
           "${pkgs.obsidian}/Applications/Obsidian.app"
           "${pkgs.wezterm}/Applications/WezTerm.app"
           "/System/Applications/Notes.app"
@@ -168,15 +181,15 @@
         dock.show-recents = false;
         dock.persistent-others = [
           "~/Applications"
-	        "/Users/fcjr/Downloads"
-	      ];
+          "/Users/fcjr/Downloads"
+        ];
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
         NSGlobalDomain.AppleInterfaceStyle= "Dark";
-	      NSGlobalDomain.KeyRepeat = 2;
+        NSGlobalDomain.KeyRepeat = 2;
       };
       system.keyboard.enableKeyMapping = true;
-			system.keyboard.remapCapsLockToControl = true;
+      system.keyboard.remapCapsLockToControl = true;
 
       security.pam.enableSudoTouchIdAuth = true;
 
@@ -212,9 +225,9 @@
         nix-homebrew.darwinModules.nix-homebrew {
           nix-homebrew = {
             enable = true;
-	          user   = "fcjr";
+            user   = "fcjr";
           };
-	      }
+        }
         home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

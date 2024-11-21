@@ -34,7 +34,28 @@
           mkalias
           neovim
           tmux
+          git
+          ripgrep
+          zoxide
+          fzf
+          gh
+          wget
+          thefuck
+          fnm
 
+          platformio
+          avrdude
+          openocd
+          arduino-cli
+
+          go
+          rustup
+          colima
+          docker
+          kubectl
+          k9s
+
+          ollama
           wezterm
           obsidian
 

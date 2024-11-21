@@ -155,6 +155,8 @@
       system.keyboard.enableKeyMapping = true;
 			system.keyboard.remapCapsLockToControl = true;
 
+      security.pam.enableSudoTouchIdAuth = true;
+
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 

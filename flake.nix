@@ -107,6 +107,7 @@
           "xcodes"
           "android-studio"
           "tailscale"
+          "proton-mail"
           "protonvpn"
           "proton-drive"
           "raycast"
@@ -115,7 +116,10 @@
           "displaylink"
           "jordanbaird-ice"
           "mist"
+          "crystalfetch"
 
+          "kicad"
+          "freecad"
           "bambu-studio"
           "prusaslicer"
           "xtool-creative-space"
@@ -167,7 +171,7 @@
       system.defaults = {
         dock.persistent-apps = [
           "/Applications/Safari.app"
-          "/Applications/Firefox Developer Edition.app"
+          "/Applications/Proton Mail.app"
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"
           "/Applications/Slack.app"

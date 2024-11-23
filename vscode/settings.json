@@ -1,0 +1,26 @@
+{
+    "workbench.iconTheme": "catppuccin-frappe",
+    "workbench.colorTheme": "Catppuccin Frappé",
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "none",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": []
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
+    },
+    "continue.telemetryEnabled": false,
+    "redhat.telemetry.enabled": false,
+    "makefile.configureOnOpen": true,
+    "editor.lineNumbers": "relative",
+    "terminal.integrated.env.osx": {}
+}

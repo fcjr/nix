@@ -191,7 +191,7 @@
 
       system.defaults = {
         dock.persistent-apps = [
-          "/Applications/Safari.app"
+          "/System/Cryptexes/App/System/Applications/Safari.app"
           "/Applications/Proton Mail.app"
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"

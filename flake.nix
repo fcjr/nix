@@ -18,8 +18,52 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager, nix-vscode-extensions }:
   let
-    configuration = { pkgs, config, ... }: {
+    configuration = { pkgs, config, ... }: 
+    let
+      system = pkgs.stdenv.hostPlatform.system;
 
+      # since this is wrapped in () the only way to refer to it again in the dock setup
+      # is to create it hre and then refer to it later
+      # other pkgs can be referenced directly
+      # doing it like the others would result in vscode being installed twice, one with 
+      # the extensions and one without
+      vscode = (pkgs.vscode-with-extensions.override {
+        vscodeExtensions = 
+          with inputs.nix-vscode-extensions.extensions.${system}.vscode-marketplace;
+          [
+            golang.go
+            eamodio.gitlens
+            continue.continue
+            saoudrizwan.claude-dev
+            rust-lang.rust-analyzer
+            vadimcn.vscode-lldb
+            sswg.swift-lang
+            msjsdiag.vscode-react-native
+            platformio.platformio-ide
+            catppuccin.catppuccin-vsc-pack
+            ms-vscode-remote.vscode-remote-extensionpack
+            editorconfig.editorconfig
+            bierner.markdown-mermaid
+            bbenoist.nix
+            yoavbls.pretty-ts-errors
+            quick-lint.quick-lint-js
+            mikestead.dotenv
+            johnpapa.vscode-cloak
+            bradlc.vscode-tailwindcss
+            austenc.tailwind-docs
+            tamasfe.even-better-toml
+            tauri-apps.tauri-vscode
+            hashicorp.terraform
+          ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+            {
+              name = "cpptools";
+              publisher = "ms-vscode";
+              version = "1.23.1";
+              sha256 = "dY9NpeuiweGOIJLrQlH95U1W6KvjneeDUveRj/XIV+I=";
+            }
+          ];
+      });
+    in {
       nixpkgs.config.allowUnfree = true;
 
       users.users.fcjr = {
@@ -63,42 +107,7 @@
           obsidian
           spotify
 
-          (vscode-with-extensions.override {
-            vscodeExtensions =
-              with nix-vscode-extensions.extensions.${system}.vscode-marketplace;
-              [
-                golang.go
-                eamodio.gitlens
-                continue.continue
-                saoudrizwan.claude-dev
-                rust-lang.rust-analyzer
-                vadimcn.vscode-lldb
-                sswg.swift-lang
-                msjsdiag.vscode-react-native
-                platformio.platformio-ide
-                catppuccin.catppuccin-vsc-pack
-                ms-vscode-remote.vscode-remote-extensionpack
-                editorconfig.editorconfig
-                bierner.markdown-mermaid
-                bbenoist.nix
-                yoavbls.pretty-ts-errors
-                quick-lint.quick-lint-js
-                mikestead.dotenv
-                johnpapa.vscode-cloak
-                bradlc.vscode-tailwindcss
-                austenc.tailwind-docs
-                tamasfe.even-better-toml
-                tauri-apps.tauri-vscode
-                hashicorp.terraform
-              ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-              {
-                name = "cpptools";
-                publisher = "ms-vscode";
-                version = "1.23.1";
-                sha256 = "dY9NpeuiweGOIJLrQlH95U1W6KvjneeDUveRj/XIV+I=";
-              }
-            ];
-            })
+          vscode
         ];
 
       services.yabai.enable = false;
@@ -187,7 +196,7 @@
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"
           "/Applications/Slack.app"
-          "${pkgs.vscode}/Applications/Visual Studio Code.app"
+          "${vscode}/Applications/Visual Studio Code.app"
           "/Applications/Xcode.app"
           "${pkgs.obsidian}/Applications/Obsidian.app"
           "${pkgs.wezterm}/Applications/WezTerm.app"

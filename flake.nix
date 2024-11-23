@@ -64,7 +64,7 @@
           spotify
 
           (vscode-with-extensions.override {
-            vscodeExtensions = 
+            vscodeExtensions =
               with nix-vscode-extensions.extensions.${system}.vscode-marketplace;
               [
                 golang.go
@@ -90,7 +90,14 @@
                 tamasfe.even-better-toml
                 tauri-apps.tauri-vscode
                 hashicorp.terraform
-              ];
+              ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+              {
+                name = "cpptools";
+                publisher = "ms-vscode";
+                version = "1.23.1";
+                sha256 = "dY9NpeuiweGOIJLrQlH95U1W6KvjneeDUveRj/XIV+I=";
+              }
+            ];
             })
         ];
 
@@ -117,6 +124,7 @@
           "jordanbaird-ice"
           "mist"
           "crystalfetch"
+          "rocket"
 
           "kicad"
           "freecad"
@@ -138,6 +146,10 @@
           "SponsorBlock for Safari" = 1573461917;
           "Kagi for Safari" = 1622835804;
           "UTM Virtual Machines" = 1538878817;
+          "Apple Configurator" = 1037126344;
+          "UniFi" = 1057750338;
+          "UniFi Protect" = 1392492235;
+          "UniFi WiFiman" = 1385561119;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;

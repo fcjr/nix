@@ -102,7 +102,6 @@
           kubectl
           k9s
 
-          ollama
           wezterm
           obsidian
           spotify
@@ -120,6 +119,10 @@
         ];
         casks = [
           "firefox@developer-edition"
+          "google-chrome"
+          "brave-browser"
+          "opera"
+          "orion"
           "xcodes"
           "android-studio"
           "tailscale"
@@ -134,6 +137,10 @@
           "mist"
           "crystalfetch"
           "rocket"
+          "ollama"
+          "chatgpt"
+          "rectangle"
+          "unraid-usb-creator-next"
 
           "kicad"
           "freecad"
@@ -159,6 +166,7 @@
           "UniFi" = 1057750338;
           "UniFi Protect" = 1392492235;
           "UniFi WiFiman" = 1385561119;
+          "Refined GitHub" = 1519867270;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;

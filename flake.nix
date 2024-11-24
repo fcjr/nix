@@ -140,6 +140,7 @@
           "ollama"
           "chatgpt"
           "rectangle"
+          "moonlight"
           "unraid-usb-creator-next"
 
           "kicad"

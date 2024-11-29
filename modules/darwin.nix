@@ -162,7 +162,7 @@ in {
         show-recents = false;
         persistent-others = [
           "~/Applications"
-          "/Users/fcjr/Downloads"
+          "/Users/${username}/Downloads"
         ];
       };
     };

@@ -189,7 +189,7 @@ in {
 
     activationScripts = {
       extraUserActivation.text = ''
-        # Allow touch id to work while docked to a displaylink hub or while screenshaing.
+        # Allow touch id to work while docked to a displaylink hub or while screen sharing.
         # https://github.com/usnistgov/macos_security/blob/e22bb0bc02290c54cb968bc3749942fa37ad752b/rules/supplemental/supplemental_smartcard.yaml#L268
         defaults write com.apple.security.authorization ignoreArd -bool TRUE
       '';

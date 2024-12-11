@@ -15,7 +15,7 @@
         EDITOR = "nvim";
       }
       // pkgs.lib.optionalAttrs pkgs.stdenv.isDarwin {
-        DOCKER_HOST = "unix://$HOME/.config/colima/default/docker.sock";
+        DOCKER_HOST = "unix://$HOME/.colima/default/docker.sock";
       };
 
     localVariables = {
@@ -37,8 +37,10 @@
       ## Secrets
       [[ ! -f ~/.secrets ]] || source ~/.secrets
 
-      ## proxmark
-      [[ ! -f ~/git/proxmark3 ]] || export PATH=$PATH:~/git/proxmark3
+      ## Homebrew
+      if [[ -x "/opt/homebrew/bin/brew" ]]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+      fi
 
       ## Zoxide
       eval "$(zoxide init zsh --cmd cd)"

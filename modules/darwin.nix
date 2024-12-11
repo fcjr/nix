@@ -18,10 +18,20 @@
 
   brews' = [
     "mas"
+    "sqlc"
+    "readline"
+    "qt@5"
+    "gd"
+    "pkgconfig"
+    "coreutils"
+    "recode"
+    "astyle"
   ];
 
   casks' = [
+    "firefox"
     "firefox@developer-edition"
+    "tor-browser"
     "google-chrome"
     "brave-browser"
     "opera"
@@ -34,6 +44,7 @@
     "proton-drive"
     "raycast"
     "hoppscotch"
+    "yaak"
     "imageoptim"
     "displaylink"
     "jordanbaird-ice"
@@ -46,6 +57,8 @@
     "unraid-usb-creator-next"
     "notchnook"
     "logi-options+"
+    "dbngin"
+    "tableplus"
 
     "kicad"
     "freecad"
@@ -72,6 +85,8 @@
     "UniFi Protect" = 1392492235;
     "UniFi WiFiman" = 1385561119;
     "Refined GitHub" = 1519867270;
+    "Meshtastic" = 1586432531;
+    "Numbers" = 409203825;
   };
 in {
   # List packages installed in system profile. To search by name, run:
@@ -122,9 +137,9 @@ in {
 
   security.pam.enableSudoTouchIdAuth = true;
 
-  # Set Git commit hash for darwin-version.
   system = {
     stateVersion = 5;
+    # Set Git commit hash for darwin-version.
     configurationRevision = revision;
 
     defaults = {
@@ -172,25 +187,33 @@ in {
       remapCapsLockToControl = true;
     };
 
-    activationScripts.applications.text = let
-      env = pkgs.buildEnv {
-        name = "system-applications";
-        paths = packages';
-        pathsToLink = "/Applications";
-      };
-    in
-      pkgs.lib.mkForce ''
-        # Set up applications.
-        echo "setting up /Applications..." >&2
-        rm -rf /Applications/Nix\ Apps
-        mkdir -p /Applications/Nix\ Apps
-        find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
-        while read -r src; do
-          app_name=$(basename "$src")
-          echo "copying $src" >&2
-          ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
-        done
+    activationScripts = {
+      extraUserActivation.text = ''
+        # Allow touch id to work while docked to a displaylink hub or while screenshaing.
+        # https://github.com/usnistgov/macos_security/blob/e22bb0bc02290c54cb968bc3749942fa37ad752b/rules/supplemental/supplemental_smartcard.yaml#L268
+        defaults write com.apple.security.authorization ignoreArd -bool TRUE
       '';
+
+      applications.text = let
+        env = pkgs.buildEnv {
+          name = "system-applications";
+          paths = packages';
+          pathsToLink = "/Applications";
+        };
+      in
+        pkgs.lib.mkForce ''
+          # Set up applications.
+          echo "setting up /Applications..." >&2
+          rm -rf /Applications/Nix\ Apps
+          mkdir -p /Applications/Nix\ Apps
+          find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
+          while read -r src; do
+            app_name=$(basename "$src")
+            echo "copying $src" >&2
+            ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
+          done
+        '';
+      };
   };
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = system;

@@ -10,7 +10,12 @@
   fonts.fontconfig.enable = true;
   home = {
     inherit stateVersion username homeDirectory;
-    sessionPath = ["$HOME/.local/bin"];
+
+    sessionPath = [
+      "$HOME/.local/bin"
+      "$HOME/git/proxmark3"
+    ];
+
     packages = import ./packages.nix {inherit pkgs;};
 
     file = {

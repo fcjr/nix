@@ -54,6 +54,8 @@
                 sswg.swift-lang
                 msjsdiag.vscode-react-native
                 platformio.platformio-ide
+                ms-azuretools.vscode-docker
+                mechatroner.rainbow-csv
 
                 # Git
                 eamodio.gitlens

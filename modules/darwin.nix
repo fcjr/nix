@@ -6,12 +6,18 @@
   stateVersion,
   ...
 } @ inputs: let
+  mkBrewfileSectionString = with pkgs; heading: entries: lib.optionalString (entries != [ ]) ''
+
+    # ${heading}
+    ${lib.concatMapStringsSep "\n" (v: v.brewfileLine or v) entries}
+
+  '';
+
   packages' = with pkgs; [
     mkalias
 
     obsidian
     wezterm
-    vscode-with-extensions
 
     spotify
   ];
@@ -26,6 +32,7 @@
     "coreutils"
     "recode"
     "astyle"
+    "cfssl"
   ];
 
   casks' = [
@@ -55,16 +62,20 @@
     "chatgpt"
     "rectangle"
     "unraid-usb-creator-next"
-    "notchnook"
     "logi-options+"
     "dbngin"
     "tableplus"
+    "visual-studio-code"
+
+    "arduino-ide"
+    "qflipper"
 
     "kicad"
     "freecad"
     "bambu-studio"
     "prusaslicer"
     "xtool-creative-space"
+    "wireshark"
 
     "signal"
     "slack"
@@ -72,6 +83,7 @@
     "zoom"
 
     "steam"
+    "moonlight"
     "utm"
   ];
   masApps' = {
@@ -81,13 +93,46 @@
     "SponsorBlock for Safari" = 1573461917;
     "Kagi for Safari" = 1622835804;
     "Apple Configurator" = 1037126344;
-    "UniFi" = 1057750338;
-    "UniFi Protect" = 1392492235;
-    "UniFi WiFiman" = 1385561119;
     "Refined GitHub" = 1519867270;
     "Meshtastic" = 1586432531;
     "Numbers" = 409203825;
+
+    # mas cant install made for iOS apps atm
+    # see: https://github.com/mas-cli/mas/issues/321
+    # "UniFi" = 1057750338;
+    # "UniFi Protect" = 1392492235;
+    # "UniFi WiFiman" = 1385561119;
   };
+  vscodeExtensions' = [
+    "eamodio.gitlens"
+    "continue.continue"
+    "saoudrizwan.claude-dev"
+    "ms-azuretools.vscode-docker"
+    "golang.go"
+    "rust-lang.rust-analyzer"
+    "sswg.swift-lang"
+    "vadimcn.vscode-lldb"
+    "bbenoist.nix"
+    "yoavbls.pretty-ts-errors"
+    "quick-lint.quick-lint-js"
+    "tamasfe.even-better-toml"
+    "mechatroner.rainbow-csv"
+    "msjsdiag.vscode-react-native"
+    "ms-vscode.makefile-tools"
+    "ms-vscode.cpptools"
+    "bradlc.vscode-tailwindcss"
+    "austenc.tailwind-docs"
+    "tauri-apps.tauri-vscode"
+    "hashicorp.terraform"
+    "platformio.platformio-ide"
+    "ms-vscode-remote.remote-ssh"
+    "catppuccin.catppuccin-vsc-pack"
+    "ms-vscode-remote.vscode-remote-extensionpack"
+    "editorconfig.editorconfig"
+    "bierner.markdown-mermaid"
+    "mikestead.dotenv"
+    "johnpapa.vscode-cloak"
+  ];
 in {
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
@@ -120,19 +165,27 @@ in {
   };
 
   # Create /etc/zshrc that loads the nix-darwin environment.
-  programs.zsh.enable = true; # default shell on catalina
-  # programs.fish.enable = true;
+  programs.zsh.enable = true;
 
   homebrew = {
     enable = true;
+
     brews = brews';
     casks = casks';
+    caskArgs = {
+      no_quarantine = true;
+    };
     masApps = masApps';
     onActivation = {
+      extraFlags = [
+        "--quiet"
+      ];
       cleanup = "zap";
       autoUpdate = true;
       upgrade = true;
     };
+    extraConfig = mkBrewfileSectionString "VSCode Extensions"
+      (builtins.map (n: ''vscode "${n}"'') vscodeExtensions');
   };
 
   security.pam.enableSudoTouchIdAuth = true;
@@ -167,7 +220,7 @@ in {
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"
           "/Applications/Slack.app"
-          "${pkgs.vscode-with-extensions}/Applications/Visual Studio Code.app"
+          "/Applications/Visual Studio Code.app"
           "/Applications/Xcode.app"
           "${pkgs.obsidian}/Applications/Obsidian.app"
           "${pkgs.wezterm}/Applications/WezTerm.app"

@@ -6,4 +6,7 @@ install:
 rebuild:
 	darwin-rebuild switch --flake .#fcjr
 
+update:
+	nix flake update
+
 .PHONY: install rebuild

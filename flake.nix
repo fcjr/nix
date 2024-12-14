@@ -6,11 +6,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     nix-darwin = {
-      url = "github:lnl7/nix-darwin/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nix-vscode-extensions = {
-      url = "github:nix-community/nix-vscode-extensions";
+      url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-utils = {
@@ -20,6 +16,10 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-homebrew = {
+      url = "github:zhaofengli/nix-homebrew";
+      inputs.nix-darwin.follows = "nix-darwin";
+    };
   };
 
   outputs = {
@@ -27,9 +27,9 @@
     flake-utils,
     home-manager,
     nix-darwin,
+    nix-homebrew,
     nixpkgs,
     nixpkgs-unstable,
-    nix-vscode-extensions,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (system: let
@@ -45,56 +45,6 @@
         (final: prev: {
           neovim = upkgs.neovim; # the stable one is way too old for my plugins
           platformio = upkgs.platformio; # https://github.com/NixOS/nixpkgs/issues/356803
-          vscode-with-extensions = prev.vscode-with-extensions.override {
-            vscodeExtensions = with nix-vscode-extensions.extensions.${system}.vscode-marketplace;
-              [
-                # Development
-                golang.go
-                rust-lang.rust-analyzer
-                sswg.swift-lang
-                msjsdiag.vscode-react-native
-                platformio.platformio-ide
-                ms-azuretools.vscode-docker
-                mechatroner.rainbow-csv
-
-                # Git
-                eamodio.gitlens
-
-                # AI/Copilot tools
-                continue.continue
-                saoudrizwan.claude-dev
-
-                # Language support
-                ms-vscode.makefile-tools
-                vadimcn.vscode-lldb
-                bbenoist.nix
-                yoavbls.pretty-ts-errors
-                quick-lint.quick-lint-js
-                tamasfe.even-better-toml
-
-                # Frameworks & Tools
-                tauri-apps.tauri-vscode
-                hashicorp.terraform
-                bradlc.vscode-tailwindcss
-                austenc.tailwind-docs
-
-                # Editor enhancements
-                catppuccin.catppuccin-vsc-pack
-                ms-vscode-remote.vscode-remote-extensionpack
-                editorconfig.editorconfig
-                bierner.markdown-mermaid
-                mikestead.dotenv
-                johnpapa.vscode-cloak
-              ]
-              ++ prev.vscode-utils.extensionsFromVscodeMarketplace [
-                {
-                  name = "cpptools";
-                  publisher = "ms-vscode";
-                  version = "1.23.1";
-                  sha256 = "dY9NpeuiweGOIJLrQlH95U1W6KvjneeDUveRj/XIV+I=";
-                }
-              ];
-          };
         })
       ];
 
@@ -107,6 +57,13 @@
         darwinSystem {
           inherit pkgs;
           modules = [
+            nix-homebrew.darwinModules.nix-homebrew
+            {
+              nix-homebrew = {
+                enable = true;
+                user = username;
+              };
+            }
             home-manager.darwinModules.home-manager
             (import ./modules/darwin.nix {
               inherit system pkgs username stateVersion;

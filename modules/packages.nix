@@ -7,6 +7,7 @@ with pkgs;
     neovim
     tmux
     git
+    git-lfs
     ripgrep
     fzf
     zoxide
@@ -22,9 +23,8 @@ with pkgs;
 
     go
     rustup
-    colima
     docker
     kubectl
     k9s
   ]
-  ++ lib.optionals stdenv.isDarwin [colima qemu]
+  ++ lib.optionals stdenv.isDarwin [colima]

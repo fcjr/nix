@@ -37,11 +37,6 @@
       ## Secrets
       [[ ! -f ~/.secrets ]] || source ~/.secrets
 
-      ## Homebrew
-      if [[ -x "/opt/homebrew/bin/brew" ]]; then
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-      fi
-
       ## Zoxide
       eval "$(zoxide init zsh --cmd cd)"
 
@@ -65,10 +60,6 @@
       }
       add-zsh-hook chpwd load-nvmrc
       load-nvmrc
-
-      function colima-start() {
-      colima start --mount-type 9p
-      }
     '';
 
     plugins = [

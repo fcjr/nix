@@ -171,6 +171,8 @@ in {
   homebrew = {
     enable = true;
 
+    global.autoUpdate = false;
+
     brews = brews';
     casks = casks';
     caskArgs = {
@@ -181,9 +183,7 @@ in {
       extraFlags = [
         "--quiet"
       ];
-      cleanup = "zap";
-      autoUpdate = true;
-      upgrade = true;
+      cleanup = "uninstall";
     };
     extraConfig = mkBrewfileSectionString "VSCode Extensions"
       (builtins.map (n: ''vscode "${n}"'') vscodeExtensions');

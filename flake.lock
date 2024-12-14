@@ -114,6 +114,7 @@
       },
       "original": {
         "owner": "zhaofengli",
+        "ref": "main",
         "repo": "nix-homebrew",
         "type": "github"
       }

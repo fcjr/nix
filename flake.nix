@@ -17,7 +17,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-homebrew = {
-      url = "github:zhaofengli/nix-homebrew";
+      url = "github:zhaofengli/nix-homebrew/main";
       inputs.nix-darwin.follows = "nix-darwin";
     };
   };

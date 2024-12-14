@@ -108,6 +108,7 @@
     "continue.continue"
     "saoudrizwan.claude-dev"
     "ms-azuretools.vscode-docker"
+    "ms-python.python"
     "golang.go"
     "rust-lang.rust-analyzer"
     "sswg.swift-lang"

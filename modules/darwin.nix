@@ -58,8 +58,11 @@
     "mist"
     "crystalfetch"
     "rocket"
+
     "ollama"
     "chatgpt"
+    "jan"
+
     "rectangle"
     "unraid-usb-creator-next"
     "logi-options+"

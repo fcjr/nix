@@ -60,6 +60,9 @@
       }
       add-zsh-hook chpwd load-nvmrc
       load-nvmrc
+
+      ## Colima
+      alias colima-start="colima start --vm-type=vz"
     '';
 
     plugins = [

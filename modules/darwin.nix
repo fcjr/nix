@@ -116,7 +116,7 @@
     "rust-lang.rust-analyzer"
     "sswg.swift-lang"
     "vadimcn.vscode-lldb"
-    "bbenoist.nix"
+    "jnoortheen.nix-ide"
     "yoavbls.pretty-ts-errors"
     "quick-lint.quick-lint-js"
     "tamasfe.even-better-toml"

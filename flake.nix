@@ -2,7 +2,7 @@
   description = "darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/release-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/release-24.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     nix-darwin = {
@@ -13,7 +13,7 @@
       url = "github:numtide/flake-utils";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-homebrew = {
@@ -35,7 +35,7 @@
     flake-utils.lib.eachDefaultSystem (system: let
       inherit (nix-darwin.lib) darwinSystem;
       inherit (home-manager.lib) homeManagerConfiguration;
-      stateVersion = "24.05";
+      stateVersion = "24.11";
 
       upkgs = import nixpkgs-unstable{
         inherit system;

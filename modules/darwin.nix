@@ -106,7 +106,7 @@
     # "UniFi Protect" = 1392492235;
     # "UniFi WiFiman" = 1385561119;
   };
-  vscodeExtensions' = [
+  vscode' = [ # vscode extensions installed via brew
     "eamodio.gitlens"
     "continue.continue"
     "saoudrizwan.claude-dev"
@@ -182,14 +182,13 @@ in {
       no_quarantine = true;
     };
     masApps = masApps';
+    vscode = vscode';
     onActivation = {
       extraFlags = [
         "--quiet"
       ];
       cleanup = "uninstall";
     };
-    extraConfig = mkBrewfileSectionString "VSCode Extensions"
-      (builtins.map (n: ''vscode "${n}"'') vscodeExtensions');
   };
 
   security.pam.enableSudoTouchIdAuth = true;
@@ -233,8 +232,16 @@ in {
         ];
         show-recents = false;
         persistent-others = [
-          "~/Applications"
-          "/Users/${username}/Downloads"
+          {
+            path = "~/Applications";
+            displayas = 1;
+          }
+          {
+            path = "/Users/${username}/Downloads";
+            displayas = 1;
+            arrangement = 2;
+            showas = 1;
+          }
         ];
       };
     };

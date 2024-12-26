@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-pid=$(ps aux | grep '[W]ezTerm.app' | awk '{print $2}')
+pid=$(ps aux | grep '[G]hostty.app' | awk '{print $2}')
 if [ -z "$pid" ]; then
-  open -a WezTerm.app
+  open -a Ghostty.app
 else
   wezterm cli spawn --new-window
 fi

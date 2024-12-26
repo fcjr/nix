@@ -17,9 +17,12 @@
     mkalias
 
     obsidian
-    wezterm
 
     spotify
+  ];
+
+  taps' = [
+    "hashicorp/tap"
   ];
 
   brews' = [
@@ -33,6 +36,11 @@
     "recode"
     "astyle"
     "cfssl"
+    "hashicorp/tap/terraform"
+    "postgresql@17"
+
+    "nsis"
+    "upx"
   ];
 
   casks' = [
@@ -58,6 +66,8 @@
     "mist"
     "crystalfetch"
     "rocket"
+    "google-cloud-sdk"
+    "ghostty"
 
     "ollama"
     "chatgpt"
@@ -99,6 +109,7 @@
     "Refined GitHub" = 1519867270;
     "Meshtastic" = 1586432531;
     "Numbers" = 409203825;
+    "Windows App" = 1295203466; # Windows Remote Desktop rebrand
 
     # mas cant install made for iOS apps atm
     # see: https://github.com/mas-cli/mas/issues/321
@@ -136,6 +147,9 @@
     "bierner.markdown-mermaid"
     "mikestead.dotenv"
     "johnpapa.vscode-cloak"
+    "toba.vsfire"
+    "svelte.svelte-vscode"
+    "expo.vscode-expo-tools"
   ];
 in {
   # List packages installed in system profile. To search by name, run:
@@ -176,6 +190,7 @@ in {
 
     global.autoUpdate = false;
 
+    taps = taps';
     brews = brews';
     casks = casks';
     caskArgs = {
@@ -226,7 +241,7 @@ in {
           "/Applications/Visual Studio Code.app"
           "/Applications/Xcode.app"
           "${pkgs.obsidian}/Applications/Obsidian.app"
-          "${pkgs.wezterm}/Applications/WezTerm.app"
+          "/Applications/Ghostty.app"
           "/System/Applications/Notes.app"
           "/System/Applications/System Settings.app"
         ];
@@ -234,13 +249,13 @@ in {
         persistent-others = [
           {
             path = "~/Applications";
-            displayas = 1;
+            displayas = "folder";
           }
           {
             path = "/Users/${username}/Downloads";
-            displayas = 1;
-            arrangement = 2;
-            showas = 1;
+            displayas = "folder";
+            arrangement = "date-added";
+            showas = "fan";
           }
         ];
       };

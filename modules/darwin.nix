@@ -68,6 +68,7 @@
     "rocket"
     "google-cloud-sdk"
     "ghostty"
+    "imhex"
 
     "ollama"
     "chatgpt"
@@ -135,6 +136,7 @@
     "msjsdiag.vscode-react-native"
     "ms-vscode.makefile-tools"
     "ms-vscode.cpptools"
+    "ms-vscode.cmake-tools"
     "bradlc.vscode-tailwindcss"
     "austenc.tailwind-docs"
     "tauri-apps.tauri-vscode"
@@ -150,6 +152,8 @@
     "toba.vsfire"
     "svelte.svelte-vscode"
     "expo.vscode-expo-tools"
+    "davidanson.vscode-markdownlint"
+    "firefox-devtools.vscode-firefox-debug"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

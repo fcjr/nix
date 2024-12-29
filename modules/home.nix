@@ -15,6 +15,9 @@
       "$HOME/go/bin"
       "$HOME/.local/bin"
       "$HOME/git/proxmark3"
+      "$HOME/Library/Android/sdk/tools"
+      "$HOME/Library/Android/sdk/tools/bin"
+      "$HOME/Library/Android/sdk/platform-tools"
     ];
 
     packages = import ./packages.nix {inherit pkgs;};

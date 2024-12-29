@@ -6,12 +6,6 @@
   stateVersion,
   ...
 } @ inputs: let
-  mkBrewfileSectionString = with pkgs; heading: entries: lib.optionalString (entries != [ ]) ''
-
-    # ${heading}
-    ${lib.concatMapStringsSep "\n" (v: v.brewfileLine or v) entries}
-
-  '';
 
   packages' = with pkgs; [
     mkalias
@@ -136,6 +130,7 @@
     "msjsdiag.vscode-react-native"
     "ms-vscode.makefile-tools"
     "ms-vscode.cpptools"
+    "twxs.cmake"
     "ms-vscode.cmake-tools"
     "bradlc.vscode-tailwindcss"
     "austenc.tailwind-docs"

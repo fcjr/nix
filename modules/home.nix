@@ -33,6 +33,7 @@
       ".config/yabai".source = ./yabai;
       ".local/bin".source = ./bin;
       "Library/Application Support/Code/User/settings.json".source = ./vscode/settings.json;
+      ".config/zed/settings.json".source = ./zed/settings.json;
     };
   };
 

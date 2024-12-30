@@ -2,7 +2,12 @@
 with pkgs;
   [
     (nerdfonts.override {
-      fonts = ["Meslo"];
+      fonts = [
+        "Meslo"
+        "Iosevka"
+        "IosevkaTerm"
+        "JetBrainsMono"
+      ];
     })
     neovim
     tmux

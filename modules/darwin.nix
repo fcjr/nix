@@ -74,6 +74,7 @@
     "dbngin"
     "tableplus"
     "visual-studio-code"
+    "zed"
 
     "arduino-ide"
     "qflipper"
@@ -237,6 +238,7 @@ in {
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"
           "/Applications/Slack.app"
+          # "/Applications/Zed.app"
           "/Applications/Visual Studio Code.app"
           "/Applications/Xcode.app"
           "${pkgs.obsidian}/Applications/Obsidian.app"

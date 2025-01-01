@@ -95,6 +95,7 @@
     "steam"
     "moonlight"
     "utm"
+    "pocket-casts"
   ];
   masApps' = {
     "Bitwarden" = 1352778147;

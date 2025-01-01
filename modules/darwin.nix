@@ -63,6 +63,7 @@
     "google-cloud-sdk"
     "ghostty"
     "imhex"
+    "github"
 
     "ollama"
     "chatgpt"
@@ -106,6 +107,7 @@
     "Meshtastic" = 1586432531;
     "Numbers" = 409203825;
     "Windows App" = 1295203466; # Windows Remote Desktop rebrand
+    "Yubico Authenticator" = 1497506650;
 
     # mas cant install made for iOS apps atm
     # see: https://github.com/mas-cli/mas/issues/321
@@ -238,6 +240,7 @@ in {
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"
           "/Applications/Slack.app"
+          "/Applications/Hoppscotch.app"
           # "/Applications/Zed.app"
           "/Applications/Visual Studio Code.app"
           "/Applications/Xcode.app"

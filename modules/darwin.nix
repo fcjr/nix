@@ -31,7 +31,7 @@
     "astyle"
     "cfssl"
     "hashicorp/tap/terraform"
-    "postgresql@17"
+    "libpq"
 
     "nsis"
     "upx"

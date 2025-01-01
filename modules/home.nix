@@ -24,7 +24,7 @@
 
     file = {
       ".hushlogin".text = "";
-      ".config/ghostty/config".source = ./shell/ghostty.conf;
+      ".config/ghostty/config".source = ./ghostty/config;
       ".gitconfig".source = ./shell/.gitconfig;
       ".work.gitconfig".source = ./shell/.work.gitconfig;
       ".tmux.conf".source = ./shell/.tmux.conf;

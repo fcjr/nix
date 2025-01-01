@@ -9,4 +9,4 @@ rebuild:
 update:
 	nix flake update
 
-.PHONY: install rebuild
+.PHONY: install rebuild update

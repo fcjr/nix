@@ -243,6 +243,7 @@ in {
           "/Applications/Signal.app"
           "/Applications/Slack.app"
           "/Applications/Hoppscotch.app"
+          "/Applications/TablePlus.app"
           # "/Applications/Zed.app"
           "/Applications/Visual Studio Code.app"
           "/Applications/Xcode.app"

@@ -90,6 +90,7 @@
     "signal"
     "slack"
     "discord"
+    "zulip"
     "zoom"
 
     "steam"

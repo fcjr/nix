@@ -32,6 +32,13 @@
     "cfssl"
     "hashicorp/tap/terraform"
     "libpq"
+    "cmake"
+
+    "hackrf"
+    "gnuradio"
+    "liquid-dsp"
+    "libbladerf"
+    "uhd"
 
     "nsis"
     "upx"
@@ -91,6 +98,7 @@
     "slack"
     "discord"
     "zulip"
+    "halloy"
     "zoom"
 
     "steam"

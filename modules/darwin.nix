@@ -103,6 +103,8 @@
 
     "steam"
     "moonlight"
+    "epilogue-playback"
+
     "utm"
     "pocket-casts"
   ];
@@ -112,6 +114,7 @@
     "AdGuard for Safari" = 1440147259;
     "SponsorBlock for Safari" = 1573461917;
     "Kagi for Safari" = 1622835804;
+    "Dark Reader for Safari" = 1438243180;
     "Apple Configurator" = 1037126344;
     "Refined GitHub" = 1519867270;
     "Meshtastic" = 1586432531;
@@ -131,6 +134,7 @@
     "saoudrizwan.claude-dev"
     "ms-azuretools.vscode-docker"
     "ms-python.python"
+    "ms-python.debugpy"
     "golang.go"
     "rust-lang.rust-analyzer"
     "sswg.swift-lang"

@@ -81,6 +81,7 @@
     "logi-options+"
     "dbngin"
     "tableplus"
+    "dbeaver-community"
     "visual-studio-code"
     "zed"
 
@@ -166,6 +167,7 @@
     "expo.vscode-expo-tools"
     "davidanson.vscode-markdownlint"
     "firefox-devtools.vscode-firefox-debug"
+    "redocly.openapi-vs-code"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

@@ -14,6 +14,7 @@
         TERM = "xterm-256color";
         EDITOR = "nvim";
         ANDROID_HOME = "$HOME/Library/Android/sdk";
+        NEXT_TELEMETRY_DISABLED = "1";
       }
       // pkgs.lib.optionalAttrs pkgs.stdenv.isDarwin {
         DOCKER_HOST = "unix://$HOME/.colima/default/docker.sock";

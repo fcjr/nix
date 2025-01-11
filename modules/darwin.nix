@@ -122,6 +122,7 @@
     "Numbers" = 409203825;
     "Windows App" = 1295203466; # Windows Remote Desktop rebrand
     "Yubico Authenticator" = 1497506650;
+    "Reeder." = 6475002485;
 
     # mas cant install made for iOS apps atm
     # see: https://github.com/mas-cli/mas/issues/321

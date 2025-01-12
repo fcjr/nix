@@ -22,5 +22,6 @@
     "redhat.telemetry.enabled": false,
     "makefile.configureOnOpen": true,
     "editor.lineNumbers": "relative",
-    "terminal.integrated.env.osx": {}
+    "terminal.integrated.env.osx": {},
+    "zig.zls.enabled": "on"
 }

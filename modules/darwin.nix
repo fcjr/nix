@@ -177,6 +177,7 @@
     "redocly.openapi-vs-code"
     "chanhx.crabviz"
     "bytecodealliance.wit-idl"
+    "ziglang.vscode-zig"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

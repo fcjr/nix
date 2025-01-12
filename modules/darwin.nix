@@ -33,6 +33,7 @@
     "hashicorp/tap/terraform"
     "libpq"
     "cmake"
+    "wasmtime"
 
     "hackrf"
     "gnuradio"
@@ -175,6 +176,7 @@
     "firefox-devtools.vscode-firefox-debug"
     "redocly.openapi-vs-code"
     "chanhx.crabviz"
+    "bytecodealliance.wit-idl"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

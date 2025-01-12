@@ -42,6 +42,9 @@
 
     "nsis"
     "upx"
+
+    "php"
+    "composer"
   ];
 
   casks' = [
@@ -108,6 +111,8 @@
 
     "utm"
     "pocket-casts"
+
+    "herd"
   ];
   masApps' = {
     "Bitwarden" = 1352778147;
@@ -169,6 +174,7 @@
     "davidanson.vscode-markdownlint"
     "firefox-devtools.vscode-firefox-debug"
     "redocly.openapi-vs-code"
+    "chanhx.crabviz"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

@@ -27,6 +27,7 @@ with pkgs;
     arduino-cli
 
     go
+    zig
     rustup
     docker
     kubectl

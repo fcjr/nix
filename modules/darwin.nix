@@ -46,6 +46,8 @@
 
     "php"
     "composer"
+
+    "c3c"
   ];
 
   casks' = [
@@ -58,6 +60,7 @@
     "orion"
     "xcodes"
     "android-studio"
+    "cursor"
     "tailscale"
     "proton-mail"
     "protonvpn"

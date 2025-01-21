@@ -260,6 +260,7 @@ in {
 
       # Dock
       dock = {
+        mru-spaces = false; # Don't rearrange spaces based on most recent use
         persistent-apps = [
           "/System/Cryptexes/App/System/Applications/Safari.app"
           "/Applications/Proton Mail.app"

@@ -34,6 +34,7 @@
     "libpq"
     "cmake"
     "wasmtime"
+    "act"
 
     "hackrf"
     "gnuradio"
@@ -48,6 +49,12 @@
     "composer"
 
     "c3c"
+
+    "tesseract"
+
+    "kubernetes-cli"
+    "siderolabs/tap/talosctl"
+    "k9s"
   ];
 
   casks' = [
@@ -58,6 +65,7 @@
     "brave-browser"
     "opera"
     "orion"
+    "zen-browser"
     "xcodes"
     "android-studio"
     "cursor"
@@ -67,6 +75,7 @@
     "proton-drive"
     "raycast"
     "hoppscotch"
+    "postman"
     "yaak"
     "imageoptim"
     "displaylink"
@@ -101,6 +110,7 @@
     "prusaslicer"
     "xtool-creative-space"
     "wireshark"
+    "utm"
 
     "signal"
     "slack"
@@ -113,10 +123,10 @@
     "moonlight"
     "epilogue-playback"
 
-    "utm"
     "pocket-casts"
+    # "herd" # PHP env manager by Laravel
 
-    "herd"
+    "headlamp"
   ];
   masApps' = {
     "Bitwarden" = 1352778147;
@@ -265,7 +275,8 @@ in {
       dock = {
         mru-spaces = false; # Don't rearrange spaces based on most recent use
         persistent-apps = [
-          "/System/Cryptexes/App/System/Applications/Safari.app"
+          # "/System/Cryptexes/App/System/Applications/Safari.app"
+          "/Applications/Firefox Developer Edition.app"
           "/Applications/Proton Mail.app"
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"

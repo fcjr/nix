@@ -53,6 +53,7 @@
     "tesseract"
 
     "kubernetes-cli"
+    "helm"
     "siderolabs/tap/talosctl"
     "k9s"
   ];

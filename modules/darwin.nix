@@ -56,6 +56,8 @@
     "helm"
     "siderolabs/tap/talosctl"
     "k9s"
+    "sops"
+    "age"
   ];
 
   casks' = [
@@ -192,6 +194,8 @@
     "chanhx.crabviz"
     "bytecodealliance.wit-idl"
     "ziglang.vscode-zig"
+    "redhat.vscode-yaml"
+    "ms-kubernetes-tools.vscode-kubernetes-tools"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

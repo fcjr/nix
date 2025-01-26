@@ -58,6 +58,9 @@
     "k9s"
     "sops"
     "age"
+    "age-plugin-yubikey"
+    "age-plugin-se"
+    "ykman"
   ];
 
   casks' = [

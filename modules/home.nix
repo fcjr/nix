@@ -19,6 +19,7 @@
       "$HOME/Library/Android/sdk/tools/bin"
       "$HOME/Library/Android/sdk/platform-tools"
       "/opt/homebrew/opt/libpq/bin"
+      "$HOME/.krew/bin"
     ];
 
     packages = import ./packages.nix {inherit pkgs;};

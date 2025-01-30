@@ -64,6 +64,14 @@
       add-zsh-hook chpwd load-nvmrc
       load-nvmrc
 
+      ## MacTeX
+      eval "$(/usr/libexec/path_helper)"
+
+      ## age
+      func age-decrypt() {
+        age -i $HOME/.config/age/keys.txt -d $1
+      }
+
       ## Colima
       alias colima-start="colima start --vm-type=vz"
     '';
@@ -85,6 +93,8 @@
     };
     shellAliases = {
       vim = "nvim";
+      k = "kubectl";
+      ksn = "kubectl config set-context --current --namespace";
     };
   };
 

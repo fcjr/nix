@@ -31,6 +31,7 @@
     "astyle"
     "cfssl"
     "hashicorp/tap/terraform"
+    "opentofu"
     "libpq"
     "cmake"
     "wasmtime"
@@ -53,14 +54,19 @@
     "tesseract"
 
     "kubernetes-cli"
+    "krew"
     "helm"
     "siderolabs/tap/talosctl"
+    "cilium-cli"
     "k9s"
     "sops"
     "age"
     "age-plugin-yubikey"
     "age-plugin-se"
     "ykman"
+    "tanka"
+
+    "pdfcpu"
   ];
 
   casks' = [
@@ -132,7 +138,11 @@
     "pocket-casts"
     # "herd" # PHP env manager by Laravel
 
+    "caffeine"
+
     "headlamp"
+
+    "mactex"
   ];
   masApps' = {
     "Bitwarden" = 1352778147;

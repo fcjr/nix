@@ -11,3 +11,6 @@ keybind = ctrl+physical:six=goto_tab:6
 keybind = ctrl+physical:seven=goto_tab:7
 keybind = ctrl+physical:eight=goto_tab:8
 keybind = ctrl+physical:nine=goto_tab:9
+
+# visor
+keybind = global:cmd+grave_accent=toggle_quick_terminal

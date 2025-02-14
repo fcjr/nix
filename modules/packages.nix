@@ -20,17 +20,18 @@ with pkgs;
     wget
     thefuck
     fnm
+    uv
 
     platformio
     avrdude
     openocd
     arduino-cli
 
-    go
     zig
     rustup
     docker
     kubectl
+    kustomize
     k9s
   ]
   ++ lib.optionals stdenv.isDarwin [colima]

@@ -20,6 +20,8 @@
   ];
 
   brews' = [
+    "jj"
+    "go"
     "mas"
     "sqlc"
     "readline"
@@ -33,6 +35,7 @@
     "hashicorp/tap/terraform"
     "opentofu"
     "libpq"
+    "xataio/pgroll/pgroll"
     "cmake"
     "wasmtime"
     "act"
@@ -52,19 +55,29 @@
     "c3c"
 
     "tesseract"
+    "ffmpeg"
 
     "kubernetes-cli"
     "krew"
     "helm"
     "siderolabs/tap/talosctl"
+    "talhelper"
     "cilium-cli"
     "k9s"
-    "sops"
+    "argocd"
+    "k8sgpt-ai/k8sgpt/k8sgpt"
+    
     "age"
     "age-plugin-yubikey"
     "age-plugin-se"
     "ykman"
+    "sops"
+
+    "posting"
+
     "tanka"
+    "jsonnet"
+    "jsonnet-bundler"
 
     "pdfcpu"
   ];
@@ -86,9 +99,9 @@
     "protonvpn"
     "proton-drive"
     "raycast"
-    "hoppscotch"
     "postman"
     "yaak"
+    "bruno"
     "imageoptim"
     "displaylink"
     "jordanbaird-ice"
@@ -99,10 +112,17 @@
     "ghostty"
     "imhex"
     "github"
+    "teamviewer"
+    "obs"
 
     "ollama"
+    "claude"
     "chatgpt"
-    "jan"
+    "msty"
+    "superwhisper"
+    
+
+    "topaz-photo-ai"
 
     "rectangle"
     "unraid-usb-creator-next"
@@ -158,6 +178,8 @@
     "Windows App" = 1295203466; # Windows Remote Desktop rebrand
     "Yubico Authenticator" = 1497506650;
     "Reeder." = 6475002485;
+    "Enchanted LLM" = 6474268307;
+    "Openterface Mini-KVM" = 6478481082;
 
     # mas cant install made for iOS apps atm
     # see: https://github.com/mas-cli/mas/issues/321
@@ -174,7 +196,7 @@
     "ms-python.debugpy"
     "golang.go"
     "rust-lang.rust-analyzer"
-    "sswg.swift-lang"
+    "swiftlang.swift-vscode"
     "vadimcn.vscode-lldb"
     "jnoortheen.nix-ide"
     "yoavbls.pretty-ts-errors"
@@ -209,6 +231,8 @@
     "ziglang.vscode-zig"
     "redhat.vscode-yaml"
     "ms-kubernetes-tools.vscode-kubernetes-tools"
+    "grafana.vscode-jsonnet"
+    "bruno-api-client.bruno"
   ];
 in {
   # List packages installed in system profile. To search by name, run:
@@ -299,14 +323,14 @@ in {
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"
           "/Applications/Slack.app"
-          "/Applications/Hoppscotch.app"
           "/Applications/TablePlus.app"
           # "/Applications/Zed.app"
           "/Applications/Visual Studio Code.app"
           "/Applications/Xcode.app"
+          "/Applications/Msty.app"
           "${pkgs.obsidian}/Applications/Obsidian.app"
           "/Applications/Ghostty.app"
-          "/System/Applications/Notes.app"
+          # "/System/Applications/Notes.app"
           "/System/Applications/System Settings.app"
         ];
         show-recents = false;

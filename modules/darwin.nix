@@ -237,6 +237,7 @@
     "ms-kubernetes-tools.vscode-kubernetes-tools"
     "grafana.vscode-jsonnet"
     "bruno-api-client.bruno"
+    "charliermarsh.ruff"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

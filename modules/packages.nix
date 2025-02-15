@@ -34,4 +34,4 @@ with pkgs;
     kustomize
     k9s
   ]
-  ++ lib.optionals stdenv.isDarwin [colima]
+

@@ -22,6 +22,7 @@
   brews' = [
     "jj"
     "go"
+    "colima"
     "mas"
     "sqlc"
     "readline"

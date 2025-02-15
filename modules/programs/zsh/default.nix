@@ -16,6 +16,7 @@
         ANDROID_HOME = "$HOME/Library/Android/sdk";
         NEXT_TELEMETRY_DISABLED = "1";
         HOMEBREW_NO_ANALYTICS = "1";
+        LIMA_SSH_PORT_FORWARDER = "false"; # enables udp port forwarding in colima
       }
       // pkgs.lib.optionalAttrs pkgs.stdenv.isDarwin {
         DOCKER_HOST = "unix://$HOME/.colima/default/docker.sock";
@@ -71,9 +72,6 @@
       func age-decrypt() {
         age -i $HOME/.config/age/keys.txt -d $1
       }
-
-      ## Colima
-      alias colima-start="colima start --vm-type=vz"
     '';
 
     plugins = [

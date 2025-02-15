@@ -40,6 +40,7 @@
     "cmake"
     "wasmtime"
     "act"
+    "restic"
 
     "hackrf"
     "gnuradio"

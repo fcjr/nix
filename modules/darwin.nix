@@ -59,14 +59,16 @@
     "tesseract"
     "ffmpeg"
 
+    "ansible"
     "kubernetes-cli"
     "krew"
     "helm"
     "siderolabs/tap/talosctl"
     "talhelper"
     "cilium-cli"
-    "k9s"
     "argocd"
+    "k9s"
+    "kdash-rs/kdash/kdash"
     "k8sgpt-ai/k8sgpt/k8sgpt"
     
     "age"

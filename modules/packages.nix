@@ -30,8 +30,6 @@ with pkgs;
     zig
     rustup
     docker
-    kubectl
-    kustomize
-    k9s
+    docker-compose
   ]
 

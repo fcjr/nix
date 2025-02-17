@@ -37,7 +37,10 @@
     "opentofu"
     "libpq"
     "xataio/pgroll/pgroll"
+    "ariga/tap/atlas"
+    "dbmate"
     "cmake"
+    "just"
     "wasmtime"
     "act"
     "restic"
@@ -61,10 +64,13 @@
 
     "ansible"
     "kubernetes-cli"
+    "kind"
     "krew"
     "helm"
+    "kustomize"
     "siderolabs/tap/talosctl"
     "talhelper"
+    "istioctl"
     "cilium-cli"
     "argocd"
     "k9s"
@@ -192,6 +198,7 @@
     # "UniFi WiFiman" = 1385561119;
   };
   vscode' = [ # vscode extensions installed via brew
+    "esbenp.prettier-vscode"
     "eamodio.gitlens"
     "continue.continue"
     "saoudrizwan.claude-dev"
@@ -238,6 +245,7 @@
     "grafana.vscode-jsonnet"
     "bruno-api-client.bruno"
     "charliermarsh.ruff"
+    "nefrob.vscode-just-syntax"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

@@ -16,12 +16,19 @@ with pkgs;
     ripgrep
     fzf
     zoxide
+    bat
+    delta
+    btop
+
     gh
     wget
     thefuck
     fnm
     uv
 
+    oha
+    iperf3
+    
     platformio
     avrdude
     openocd

@@ -17,11 +17,19 @@
 
   taps' = [
     "hashicorp/tap"
+    "xataio/pgroll"
+    "ariga/tap"
+    "siderolabs/tap"
+    "kdash-rs/kdash"
+    "k8sgpt-ai/k8sgpt"
+    "tillitis/tkey"
+    "spinframework/tap"
   ];
 
   brews' = [
     "jj"
     "go"
+    "golangci-lint"
     "colima"
     "mas"
     "sqlc"
@@ -76,12 +84,19 @@
     "k9s"
     "kdash-rs/kdash/kdash"
     "k8sgpt-ai/k8sgpt/k8sgpt"
-    
+    "kubeshark"
+
     "age"
     "age-plugin-yubikey"
     "age-plugin-se"
     "ykman"
     "sops"
+
+    "tillitis/tkey/tkey-verification"
+    "tillitis/tkey/tkey-sign"
+    "tillitis/tkey/tkey-random-generator"
+
+    "tkey-ssh-agent"
 
     "posting"
 
@@ -90,6 +105,12 @@
     "jsonnet-bundler"
 
     "pdfcpu"
+
+    "spinframework/tap/spin"
+
+    "kcat"
+
+    "deno"
   ];
 
   casks' = [
@@ -173,6 +194,7 @@
     "headlamp"
 
     "mactex"
+    "jupyterlab"
   ];
   masApps' = {
     "Bitwarden" = 1352778147;
@@ -223,6 +245,7 @@
     "austenc.tailwind-docs"
     "tauri-apps.tauri-vscode"
     "hashicorp.terraform"
+    "ms-vscode.cpptools-extension-pack"
     "platformio.platformio-ide"
     "ms-vscode-remote.remote-ssh"
     "catppuccin.catppuccin-vsc-pack"
@@ -246,6 +269,8 @@
     "bruno-api-client.bruno"
     "charliermarsh.ruff"
     "nefrob.vscode-just-syntax"
+    "ms-toolsai.jupyter"
+    "denoland.vscode-deno"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

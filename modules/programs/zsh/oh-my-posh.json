@@ -1,0 +1,79 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "root",
+          "style": "plain",
+          "template": " \uf0e7 ",
+          "background": "#546E7A",
+          "foreground": "#26C6DA"
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "template": " {{ .Path }} ",
+          "properties": {
+            "style": "full"
+          },
+          "background": "#546E7A",
+          "foreground": "#26C6DA"
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "template": "<#26C6DA>\ue0b1 </>{{ .HEAD }} ",
+          "background": "#546E7A",
+          "foreground": "#D4E157"
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "\ue0b0",
+          "background": "transparent",
+          "foreground": "#546E7A"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "time",
+          "style": "diamond",
+          "leading_diamond": "\ue0b2",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "properties": {
+            "time_format": "3:04 PM"
+          },
+          "background": "#546E7A",
+          "foreground": "#D4E157"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#FF5252{{ end }}"
+          ],
+          "template": "❯ ",
+          "properties": {
+            "always_enabled": true
+          },
+          "foreground": "#D4E157"
+        }
+      ],
+      "newline": true
+    }
+  ]
+}

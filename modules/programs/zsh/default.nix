@@ -36,7 +36,6 @@
     historySubstringSearch = {enable = true;};
 
     initExtra = ''
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
       ## Secrets
       [[ ! -f ~/.secrets ]] || source ~/.secrets
@@ -65,6 +64,16 @@
       add-zsh-hook chpwd load-nvmrc
       load-nvmrc
 
+      ## Fix uv run autocomplete to complete files not flags
+      _uv_run() {
+        if [[ $CURRENT -gt 2 && ''${words[2]} == "run" ]]; then
+          _files
+        else
+          _uv
+        fi
+      }
+      compdef _uv_run uv
+
       ## MacTeX
       eval "$(/usr/libexec/path_helper)"
 
@@ -74,28 +83,26 @@
       }
     '';
 
-    plugins = [
-      {
-        name = "powerlevel10k";
-        file = "powerlevel10k.zsh-theme";
-        src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
-      }
-    ];
-
     oh-my-zsh = {
       enable = true;
       plugins = [
         "git"
-        "wd"
       ];
     };
+
     shellAliases = {
+      cat = "bat";
       vim = "nvim";
       k = "kubectl";
       ksn = "kubectl config set-context --current --namespace";
     };
   };
 
-  home.file.".p10k.zsh".source = ./.p10k.zsh;
+  programs.oh-my-posh = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = builtins.fromJSON (builtins.unsafeDiscardStringContext (builtins.readFile ./oh-my-posh.json));
+  };
+
   home.file.".node_version".source = ./.node_version;
 }

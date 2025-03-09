@@ -86,6 +86,8 @@
     "kdash-rs/kdash/kdash"
     "k8sgpt-ai/k8sgpt/k8sgpt"
     "kubeshark"
+    "ko"
+    "oras"
 
     "age"
     "age-plugin-yubikey"

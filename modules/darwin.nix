@@ -370,6 +370,7 @@ in {
           "/Applications/Visual Studio Code.app"
           "/Applications/Xcode.app"
           "/Applications/Msty.app"
+          "/Applications/Claude.app"
           "${pkgs.obsidian}/Applications/Obsidian.app"
           "/Applications/Ghostty.app"
           # "/System/Applications/Notes.app"

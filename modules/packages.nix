@@ -17,7 +17,6 @@ with pkgs;
     fzf
     zoxide
     bat
-    delta
     btop
 
     gh

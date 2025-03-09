@@ -146,6 +146,9 @@
     "teamviewer"
     "obs"
 
+    "1password"
+    "1password-cli"
+
     "ollama"
     "claude"
     "chatgpt"
@@ -271,6 +274,7 @@
     "nefrob.vscode-just-syntax"
     "ms-toolsai.jupyter"
     "denoland.vscode-deno"
+    "1Password.op-vscode"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

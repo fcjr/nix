@@ -52,6 +52,7 @@
     "wasmtime"
     "act"
     "restic"
+    "awscli"
 
     "hackrf"
     "gnuradio"

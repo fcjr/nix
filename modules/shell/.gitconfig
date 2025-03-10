@@ -25,16 +25,16 @@
     undome = commit -am 'undo me'
     undo = reset HEAD~1
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
+    smudge = git-lfs smudge -- %f
     required = true
-	clean = git-lfs clean -- %f
-	process = git-lfs filter-process
+    clean = git-lfs clean -- %f
+    process = git-lfs filter-process
 [color]
-	branch = auto
+    branch = auto
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [pull]
-	rebase = true
+    rebase = true
 [push]
 	autoSetupRemote = true
 [fetch]
@@ -49,6 +49,6 @@
 [column]
     ui = auto
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
 [includeIf "gitdir/i:~/work/"]
-	path = .work.gitconfig
+    path = .work.gitconfig

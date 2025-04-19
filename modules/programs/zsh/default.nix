@@ -19,7 +19,7 @@
         LIMA_SSH_PORT_FORWARDER = "false"; # enables udp port forwarding in colima
       }
       // pkgs.lib.optionalAttrs pkgs.stdenv.isDarwin {
-        DOCKER_HOST = "unix://$HOME/.colima/default/docker.sock";
+        DOCKER_HOST = "unix://$HOME/.config/colima/default/docker.sock";
       };
 
     localVariables = {

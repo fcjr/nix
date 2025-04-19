@@ -235,6 +235,7 @@
     "ms-python.debugpy"
     "golang.go"
     "rust-lang.rust-analyzer"
+    "llvm-vs-code-extensions.lldb-dap"
     "swiftlang.swift-vscode"
     "vadimcn.vscode-lldb"
     "jnoortheen.nix-ide"

@@ -24,6 +24,9 @@
     "k8sgpt-ai/k8sgpt"
     "tillitis/tkey"
     "spinframework/tap"
+    "leoafarias/fvm"
+    "oven-sh/bun"
+    "restatedev/tap"
   ];
 
   brews' = [
@@ -114,6 +117,14 @@
     "kcat"
 
     "deno"
+    "oven-sh/bun/bun"
+
+    "leoafarias/fvm/fvm"
+
+    "livekit"
+    "certbot"
+    "restatedev/tap/restate-server"
+    "restatedev/tap/restate"
   ];
 
   casks' = [
@@ -263,6 +274,7 @@
     "johnpapa.vscode-cloak"
     "toba.vsfire"
     "svelte.svelte-vscode"
+    "inlang.vs-code-extension"
     "expo.vscode-expo-tools"
     "davidanson.vscode-markdownlint"
     "firefox-devtools.vscode-firefox-debug"

@@ -43,6 +43,9 @@
       ## Zoxide
       eval "$(zoxide init zsh --cmd cd)"
 
+      ## Atuin
+      eval "$(atuin init zsh)"
+
       ## FNM (Node Manager)
       eval "$(fnm env)"
 
@@ -93,6 +96,7 @@
     shellAliases = {
       cat = "bat";
       vim = "nvim";
+      top = "btop";
       k = "kubectl";
       ksn = "kubectl config set-context --current --namespace";
     };

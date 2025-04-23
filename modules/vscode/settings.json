@@ -23,5 +23,6 @@
     "makefile.configureOnOpen": true,
     "editor.lineNumbers": "relative",
     "terminal.integrated.env.osx": {},
-    "zig.zls.enabled": "on"
+    "zig.zls.enabled": "on",
+    "svelte.enable-ts-plugin": true
 }

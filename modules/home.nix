@@ -30,6 +30,7 @@
       ".gitconfig".source = ./shell/.gitconfig;
       ".work.gitconfig".source = ./shell/.work.gitconfig;
       ".tmux.conf".source = ./shell/.tmux.conf;
+      ".config/btop/btop.conf".source = ./shell/btop.conf;
       ".config/nvim".source = ./nvim;
       ".config/skhd".source = ./skhd;
       ".config/yabai".source = ./yabai;

@@ -21,6 +21,7 @@ with pkgs;
 
     gh
     wget
+    atuin
     thefuck
     fnm
     uv

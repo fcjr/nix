@@ -33,7 +33,12 @@
     "jj"
     "go"
     "golangci-lint"
-    "colima"
+    { 
+      name = "colima";
+      args = [ "HEAD" ];
+      # can be reverted once https://github.com/abiosoft/colima/commit/e65e6c6f57aa97615c9cac2e4d7b5437a3d0e581
+      # is released (post 0.8.1).
+    }
     "mas"
     "sqlc"
     "readline"

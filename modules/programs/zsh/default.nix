@@ -43,9 +43,6 @@
       ## Zoxide
       eval "$(zoxide init zsh --cmd cd)"
 
-      ## Atuin
-      eval "$(atuin init zsh)"
-
       ## FNM (Node Manager)
       eval "$(fnm env)"
 

@@ -165,6 +165,7 @@
     "github"
     "teamviewer"
     "obs"
+    "opal-composer"
 
     "1password"
     "1password-cli"

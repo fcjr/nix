@@ -12,6 +12,7 @@
     br = branch
     cb = checkout -b
     unstage = reset HEAD --
+    stash-resolve = !git restore --staged . && git stash drop
     last = log -1 HEAD
     pom = push origin master
     lg = !git --no-pager log --oneline -n 10 --graph --decorate

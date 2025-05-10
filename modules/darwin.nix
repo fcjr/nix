@@ -140,7 +140,7 @@
     "brave-browser"
     "opera"
     "orion"
-    "zen-browser"
+    "zen"
     "xcodes"
     "android-studio"
     "cursor"

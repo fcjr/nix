@@ -75,6 +75,7 @@
     "composer"
 
     "c3c"
+    "zig"
 
     "tesseract"
     "ffmpeg"

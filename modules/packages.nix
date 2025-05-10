@@ -33,7 +33,6 @@ with pkgs;
     openocd
     arduino-cli
 
-    zig
     rustup
     docker
     docker-compose

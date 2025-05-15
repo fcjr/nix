@@ -299,6 +299,7 @@
     "ms-toolsai.jupyter"
     "denoland.vscode-deno"
     "1Password.op-vscode"
+    "pomdtr.excalidraw-editor"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

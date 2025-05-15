@@ -165,6 +165,7 @@
     "github"
     "teamviewer"
     "obs"
+    "audacity"
     "opal-composer"
 
     "1password"

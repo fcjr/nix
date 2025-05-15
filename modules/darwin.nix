@@ -388,6 +388,7 @@ in {
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"
           "/Applications/Slack.app"
+          "/Applications/Zulip.app"
           "/Applications/TablePlus.app"
           # "/Applications/Zed.app"
           "/Applications/Visual Studio Code.app"

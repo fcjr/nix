@@ -27,6 +27,7 @@
     "leoafarias/fvm"
     "oven-sh/bun"
     "restatedev/tap"
+    "fcjr/fcjr"
   ];
 
   brews' = [
@@ -61,6 +62,7 @@
     "act"
     "restic"
     "awscli"
+    "fcjr/fcjr/git-vibe"
 
     "hackrf"
     "gnuradio"

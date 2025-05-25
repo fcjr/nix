@@ -260,6 +260,7 @@
     "jnoortheen.nix-ide"
     "yoavbls.pretty-ts-errors"
     "quick-lint.quick-lint-js"
+    "csstools.postcss"
     "tamasfe.even-better-toml"
     "mechatroner.rainbow-csv"
     "msjsdiag.vscode-react-native"
@@ -300,6 +301,13 @@
     "denoland.vscode-deno"
     "1Password.op-vscode"
     "pomdtr.excalidraw-editor"
+    "ms-ossdata.vscode-pgsql"
+    "ms-python.vscode-pylance"
+    "ms-toolsai.jupyter-keymap"
+    "ms-toolsai.jupyter-renderers"
+    "ms-toolsai.vscode-jupyter-cell-tags"
+    "ms-toolsai.vscode-jupyter-slideshow"
+    "fosshaas.fontsize-shortcuts"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

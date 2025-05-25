@@ -6,6 +6,8 @@
     "editor.tokenColorCustomizations": {
         "textMateRules": []
     },
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
     "go.toolsManagement.autoUpdate": true,
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {

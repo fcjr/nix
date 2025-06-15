@@ -2,7 +2,7 @@
   description = "darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/release-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     nix-darwin = {
@@ -13,12 +13,11 @@
       url = "github:numtide/flake-utils";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-homebrew = {
       url = "github:zhaofengli/nix-homebrew/main";
-      inputs.nix-darwin.follows = "nix-darwin";
     };
   };
 

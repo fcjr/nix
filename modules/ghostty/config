@@ -14,3 +14,6 @@ keybind = ctrl+physical:nine=goto_tab:9
 
 # visor
 keybind = global:cmd+grave_accent=toggle_quick_terminal
+
+# claude code
+keybind = shift+enter=text:\n

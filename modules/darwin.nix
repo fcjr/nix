@@ -62,6 +62,7 @@
     "act"
     "restic"
     "awscli"
+    "cloudflared"
     "fcjr/fcjr/git-vibe"
 
     "hackrf"
@@ -78,6 +79,7 @@
 
     "c3c"
     "zig"
+    "cocoapods"
 
     "tesseract"
     "ffmpeg"
@@ -146,6 +148,7 @@
     "zen"
     "xcodes"
     "android-studio"
+    "android-ndk"
     "cursor"
     "tailscale"
     "proton-mail"
@@ -179,12 +182,11 @@
     "msty"
     "superwhisper"
     
-
     "topaz-photo-ai"
 
-    "rectangle"
     "unraid-usb-creator-next"
-    "logi-options+"
+    "balenaetcher"
+    "raspberry-pi-imager"
     "dbngin"
     "tableplus"
     "dbeaver-community"
@@ -217,6 +219,9 @@
     # "herd" # PHP env manager by Laravel
 
     "caffeine"
+    "rectangle"
+    "lunar"
+    "logi-options+"
 
     "headlamp"
 
@@ -239,6 +244,7 @@
     "Reeder." = 6475002485;
     "Enchanted LLM" = 6474268307;
     "Openterface Mini-KVM" = 6478481082;
+    "Apple Developer" = 640199958;
 
     # mas cant install made for iOS apps atm
     # see: https://github.com/mas-cli/mas/issues/321
@@ -251,6 +257,7 @@
     "eamodio.gitlens"
     "continue.continue"
     "saoudrizwan.claude-dev"
+    "ms-azuretools.vscode-containers"
     "ms-azuretools.vscode-docker"
     "ms-python.python"
     "ms-python.debugpy"
@@ -315,9 +322,8 @@ in {
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = packages';
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
   nix = {
+    enable = true;
     package = pkgs.nixVersions.latest;
     gc = {
       automatic = true;
@@ -366,9 +372,11 @@ in {
     };
   };
 
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   system = {
+    primaryUser = username;
+
     stateVersion = 5;
     # Set Git commit hash for darwin-version.
     configurationRevision = revision;
@@ -434,7 +442,7 @@ in {
     };
 
     activationScripts = {
-      extraUserActivation.text = ''
+      touchid.text = ''
         # Allow touch id to work while docked to a displaylink hub or while screen sharing.
         # https://github.com/usnistgov/macos_security/blob/e22bb0bc02290c54cb968bc3749942fa37ad752b/rules/supplemental/supplemental_smartcard.yaml#L268
         defaults write com.apple.security.authorization ignoreArd -bool TRUE

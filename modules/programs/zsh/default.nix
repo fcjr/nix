@@ -14,6 +14,8 @@
         TERM = "xterm-256color";
         EDITOR = "nvim";
         ANDROID_HOME = "$HOME/Library/Android/sdk";
+        ANDROID_NDK_HOME = "/opt/homebrew/share/android-ndk";
+        NDK_HOME = "$ANDROID_NDK_HOME";
         NEXT_TELEMETRY_DISABLED = "1";
         HOMEBREW_NO_ANALYTICS = "1";
         LIMA_SSH_PORT_FORWARDER = "false"; # enables udp port forwarding in colima
@@ -35,7 +37,7 @@
 
     historySubstringSearch = {enable = true;};
 
-    initExtra = ''
+    initContent = ''
 
       ## Secrets
       [[ ! -f ~/.secrets ]] || source ~/.secrets

@@ -1,14 +1,11 @@
 {pkgs, ...}:
 with pkgs;
   [
-    (nerdfonts.override {
-      fonts = [
-        "Meslo"
-        "Iosevka"
-        "IosevkaTerm"
-        "JetBrainsMono"
-      ];
-    })
+    nerd-fonts.meslo-lg
+    nerd-fonts.iosevka
+    nerd-fonts.iosevka-term
+    nerd-fonts.jetbrains-mono
+
     neovim
     tmux
     git

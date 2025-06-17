@@ -183,6 +183,7 @@
     "superwhisper"
     
     "topaz-photo-ai"
+    "typefully"
 
     "unraid-usb-creator-next"
     "balenaetcher"

@@ -146,11 +146,11 @@
     "opera"
     "orion"
     "zen"
-    "xcodes"
+    "xcodes-app"
     "android-studio"
     "android-ndk"
     "cursor"
-    "tailscale"
+    "tailscale-app"
     "proton-mail"
     "protonvpn"
     "proton-drive"
@@ -176,7 +176,7 @@
     "1password"
     "1password-cli"
 
-    "ollama"
+    "ollama-app"
     "claude"
     "chatgpt"
     "msty"
@@ -184,6 +184,7 @@
     
     "topaz-photo-ai"
     "typefully"
+    "warp"
 
     "unraid-usb-creator-next"
     "balenaetcher"
@@ -202,7 +203,7 @@
     "bambu-studio"
     "prusaslicer"
     "xtool-creative-space"
-    "wireshark"
+    "wireshark-app"
     "utm"
 
     "signal"
@@ -227,7 +228,7 @@
     "headlamp"
 
     "mactex"
-    "jupyterlab"
+    "jupyterlab-app"
   ];
   masApps' = {
     "Bitwarden" = 1352778147;
@@ -258,6 +259,7 @@
     "eamodio.gitlens"
     "continue.continue"
     "saoudrizwan.claude-dev"
+    "anthropic.claude-code"
     "ms-azuretools.vscode-containers"
     "ms-azuretools.vscode-docker"
     "ms-python.python"

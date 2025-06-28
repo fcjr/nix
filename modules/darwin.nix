@@ -182,6 +182,7 @@
     "claude"
     "chatgpt"
     "msty"
+    "lm-studio"
     "superwhisper"
     
     "topaz-photo-ai"

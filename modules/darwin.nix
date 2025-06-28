@@ -28,6 +28,7 @@
     "oven-sh/bun"
     "restatedev/tap"
     "fcjr/fcjr"
+    "sst/tap"
   ];
 
   brews' = [
@@ -135,6 +136,7 @@
     "certbot"
     "restatedev/tap/restate-server"
     "restatedev/tap/restate"
+    "sst/tap/opencode"
   ];
 
   casks' = [

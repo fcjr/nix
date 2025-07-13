@@ -1,4 +1,6 @@
 {
+  config,
+  lib,
   pkgs,
   username,
   homeDirectory,
@@ -36,10 +38,15 @@
       ".config/skhd".source = ./skhd;
       ".config/yabai".source = ./yabai;
       ".local/bin".source = ./bin;
-      "Library/Application Support/Code/User/settings.json".source = ./vscode/settings.json;
       ".config/zed/settings.json".source = ./zed/settings.json;
     };
   };
+
+  home.activation.linkVSCodeSettings = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    mkdir -p "$HOME/Library/Application Support/Code/User"
+    NIX_CONFIG_PATH=''${NIX_CONFIG_PATH:-$(pwd)}
+    ln -sf "$NIX_CONFIG_PATH/modules/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+  '';
 
 imports = [
     ./programs/k9s

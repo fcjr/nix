@@ -64,6 +64,7 @@
     "restic"
     "awscli"
     "cloudflared"
+    "zx"
     "fcjr/fcjr/git-vibe"
 
     "hackrf"
@@ -137,6 +138,14 @@
     "restatedev/tap/restate-server"
     "restatedev/tap/restate"
     "sst/tap/opencode"
+    "slides"
+
+    # Embedded Rust
+    "ninja"
+    "dfu-util"
+    "arm-none-eabi-gdb"
+    "openocd"
+    "qemu"
   ];
 
   casks' = [
@@ -166,7 +175,7 @@
     "mist"
     "crystalfetch"
     "rocket"
-    "google-cloud-sdk"
+    "gcloud-cli"
     "ghostty"
     "imhex"
     "github"
@@ -174,6 +183,7 @@
     "obs"
     "audacity"
     "opal-composer"
+    "sf-symbols"
 
     "1password"
     "1password-cli"
@@ -198,6 +208,11 @@
     "visual-studio-code"
     "zed"
 
+    # embedded rust
+    "wch-ch34x-usb-serial-driver"
+
+    "gcc-arm-embedded"
+    "nordic-nrf-command-line-tools"
     "arduino-ide"
     "qflipper"
 
@@ -205,7 +220,16 @@
     "freecad"
     "bambu-studio"
     "prusaslicer"
+    "affinity-designer"
+    "affinity-photo"
+    "affinity-publisher"
+    "figma"
     "xtool-creative-space"
+    "openscad"
+    "autodesk-fusion"
+    "easyeda"
+    "libreoffice"
+
     "wireshark-app"
     "utm"
 
@@ -230,8 +254,13 @@
 
     "headlamp"
 
+    "dash"
     "mactex"
     "jupyterlab-app"
+    "livebook"
+
+    "deskpad"
+    "blackhole-2ch"
   ];
   masApps' = {
     "Bitwarden" = 1352778147;
@@ -250,6 +279,8 @@
     "Enchanted LLM" = 6474268307;
     "Openterface Mini-KVM" = 6478481082;
     "Apple Developer" = 640199958;
+    "Chameleon Ultra GUI" = 6462919364;
+    "Amazon Kindle" = 302584613;
 
     # mas cant install made for iOS apps atm
     # see: https://github.com/mas-cli/mas/issues/321
@@ -271,6 +302,7 @@
     "rust-lang.rust-analyzer"
     "llvm-vs-code-extensions.lldb-dap"
     "swiftlang.swift-vscode"
+    "fwcd.kotlin"
     "vadimcn.vscode-lldb"
     "jnoortheen.nix-ide"
     "yoavbls.pretty-ts-errors"
@@ -281,7 +313,6 @@
     "msjsdiag.vscode-react-native"
     "ms-vscode.makefile-tools"
     "ms-vscode.cpptools"
-    "twxs.cmake"
     "ms-vscode.cmake-tools"
     "bradlc.vscode-tailwindcss"
     "austenc.tailwind-docs"
@@ -323,6 +354,7 @@
     "ms-toolsai.vscode-jupyter-cell-tags"
     "ms-toolsai.vscode-jupyter-slideshow"
     "fosshaas.fontsize-shortcuts"
+    "marp-team.marp-vscode"
   ];
 in {
   # List packages installed in system profile. To search by name, run:
@@ -481,8 +513,8 @@ in {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.${username} = import ./home.nix {
-      inherit stateVersion pkgs username system;
+    users.${username} = {config, lib, ...}: import ./home.nix {
+      inherit config lib stateVersion pkgs username system;
       nixvim = inputs.nixvim;
       homeDirectory =
         if pkgs.stdenv.isLinux

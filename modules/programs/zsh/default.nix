@@ -83,6 +83,9 @@
       func age-decrypt() {
         age -i $HOME/.config/age/keys.txt -d $1
       }
+
+      ## esp-rs
+      [[ ! -f ~/export-esp.sh ]] || source $HOME/export-esp.sh
     '';
 
     oh-my-zsh = {

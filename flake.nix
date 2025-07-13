@@ -65,7 +65,7 @@
             }
             home-manager.darwinModules.home-manager
             (import ./modules/darwin.nix {
-              inherit system pkgs username stateVersion;
+              inherit system pkgs username stateVersion self;
               revision = self.rev or self.dirtyRev or null;
             })
           ];
@@ -76,7 +76,7 @@
           inherit pkgs;
           modules = [
             (import ./modules/home.nix {
-              inherit username pkgs stateVersion system;
+              inherit username pkgs stateVersion system self;
               homeDirectory =
                 if pkgs.stdenv.isLinux
                 then "/home/${username}"

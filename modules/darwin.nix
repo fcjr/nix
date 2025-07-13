@@ -4,6 +4,7 @@
   revision,
   username,
   stateVersion,
+  self,
   ...
 } @ inputs: let
 
@@ -355,6 +356,7 @@
     "ms-toolsai.vscode-jupyter-slideshow"
     "fosshaas.fontsize-shortcuts"
     "marp-team.marp-vscode"
+    "atopile.atopile"
   ];
 in {
   # List packages installed in system profile. To search by name, run:
@@ -514,7 +516,7 @@ in {
     useGlobalPkgs = true;
     useUserPackages = true;
     users.${username} = {config, lib, ...}: import ./home.nix {
-      inherit config lib stateVersion pkgs username system;
+      inherit config lib stateVersion pkgs username system self;
       nixvim = inputs.nixvim;
       homeDirectory =
         if pkgs.stdenv.isLinux

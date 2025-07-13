@@ -6,6 +6,7 @@
   homeDirectory,
   stateVersion,
   system,
+  self,
   ...
 }: {
   xdg.enable = true;
@@ -44,8 +45,7 @@
 
   home.activation.linkVSCodeSettings = lib.hm.dag.entryAfter ["writeBoundary"] ''
     mkdir -p "$HOME/Library/Application Support/Code/User"
-    NIX_CONFIG_PATH=''${NIX_CONFIG_PATH:-$(pwd)}
-    ln -sf "$NIX_CONFIG_PATH/modules/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+    ln -sf "${builtins.getEnv "PWD"}/modules/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
   '';
 
 imports = [

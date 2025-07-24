@@ -11,6 +11,7 @@
 }: {
   xdg.enable = true;
   fonts.fontconfig.enable = true;
+
   home = {
     inherit stateVersion username homeDirectory;
 
@@ -18,12 +19,12 @@
       "$HOME/go/bin"
       "$HOME/.cargo/bin"
       "$HOME/.local/bin"
-      "$HOME/git/proxmark3"
       "$HOME/Library/Android/sdk/tools"
       "$HOME/Library/Android/sdk/tools/bin"
       "$HOME/Library/Android/sdk/platform-tools"
       "/opt/homebrew/opt/libpq/bin"
       "$HOME/.krew/bin"
+      "/opt/homebrew/opt/make/libexec/gnubin"
     ];
 
     packages = import ./packages.nix {inherit pkgs;};
@@ -41,14 +42,15 @@
       ".local/bin".source = ./bin;
       ".config/zed/settings.json".source = ./zed/settings.json;
     };
+
+    # activation.linkVSCodeSettings = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    #   mkdir -p "$HOME/Library/Application Support/Code/User"
+    #   ln -sf "$HOME/nix/modules/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+    # '';
+
   };
 
-  home.activation.linkVSCodeSettings = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    mkdir -p "$HOME/Library/Application Support/Code/User"
-    ln -sf "${builtins.getEnv "PWD"}/modules/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-  '';
-
-imports = [
+  imports = [
     ./programs/k9s
     ./programs/zsh
   ];

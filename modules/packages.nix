@@ -33,5 +33,7 @@ with pkgs;
     rustup
     docker
     docker-compose
+
+    proxmark3
   ]
 

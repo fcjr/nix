@@ -30,6 +30,7 @@
     "restatedev/tap"
     "fcjr/fcjr"
     "sst/tap"
+    "atopile/tap"
   ];
 
   brews' = [
@@ -55,6 +56,7 @@
     "hashicorp/tap/terraform"
     "opentofu"
     "libpq"
+    "postgis"
     "xataio/pgroll/pgroll"
     "ariga/tap/atlas"
     "dbmate"
@@ -67,6 +69,7 @@
     "cloudflared"
     "zx"
     "fcjr/fcjr/git-vibe"
+    "duckdb"
 
     "hackrf"
     "gnuradio"
@@ -147,6 +150,8 @@
     "arm-none-eabi-gdb"
     "openocd"
     "qemu"
+
+    "atopile/tap/atopile"
   ];
 
   casks' = [

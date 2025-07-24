@@ -86,6 +86,17 @@
 
       ## esp-rs
       [[ ! -f ~/export-esp.sh ]] || source $HOME/export-esp.sh
+
+
+      ## nix wrappper for zsh
+      nix() {
+        if [[ $1 == "develop" ]]; then
+          shift
+          command nix develop -c $SHELL "$@"
+        else
+          command nix "$@"
+        fi
+      }
     '';
 
     oh-my-zsh = {
@@ -101,6 +112,7 @@
       top = "btop";
       k = "kubectl";
       ksn = "kubectl config set-context --current --namespace";
+      nix-shell = "nix-shell --command zsh";
     };
   };
 

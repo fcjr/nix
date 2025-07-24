@@ -44,9 +44,29 @@
       "alignment": "right",
       "segments": [
         {
+          "type": "text",
+          "style": "plain",
+          "template": "\ue0b2",
+          "background": "transparent",
+          "foreground": "#546E7A"
+        },
+        {
+          "type": "nix-shell",
+          "style": "plain",
+          "template": " \uf313 Nix <#26C6DA>\ue0b3</>",
+          "background": "#546E7A",
+          "foreground": "#26C6DA"
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "template": " \ue235 {{ .Venv }} <#26C6DA>\ue0b3</>",
+          "background": "#546E7A",
+          "foreground": "#26C6DA"
+        },
+        {
           "type": "time",
-          "style": "diamond",
-          "leading_diamond": "\ue0b2",
+          "style": "plain",
           "template": " {{ .CurrentDate | date .Format }} ",
           "properties": {
             "time_format": "3:04 PM"

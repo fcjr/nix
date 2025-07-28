@@ -34,6 +34,7 @@ with pkgs;
     docker
     docker-compose
 
-    proxmark3
+    (proxmark3.override { hardwarePlatformExtras = "BTADDON"; })
+    chameleon-ultra-cli
   ]
 

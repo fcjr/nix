@@ -216,6 +216,7 @@
 
     # embedded rust
     "wch-ch34x-usb-serial-driver"
+    "serial"
 
     "gcc-arm-embedded"
     "nordic-nrf-command-line-tools"

@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    personal-overlay.url = "github:fcjr/nix-overlay/main";
 
     nix-darwin = {
       url = "github:fcjr/nix-darwin/master";
@@ -29,6 +30,7 @@
     nix-homebrew,
     nixpkgs,
     nixpkgs-unstable,
+    personal-overlay,
     ...
   }:
     flake-utils.lib.eachDefaultSystem (system: let
@@ -41,9 +43,11 @@
       };
 
       overlays = [
+        personal-overlay.overlays.default
         (final: prev: {
           neovim = upkgs.neovim; # the stable one is way too old for my plugins
           platformio = upkgs.platformio; # https://github.com/NixOS/nixpkgs/issues/356803
+          proxmark3 = upkgs.proxmark3;
         })
       ];
 

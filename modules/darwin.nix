@@ -7,7 +7,6 @@
   self,
   ...
 } @ inputs: let
-
   packages' = with pkgs; [
     mkalias
 
@@ -37,9 +36,9 @@
     "jj"
     "go"
     "golangci-lint"
-    { 
+    {
       name = "colima";
-      args = [ "HEAD" ];
+      args = ["HEAD"];
       # can be reverted once https://github.com/abiosoft/colima/commit/e65e6c6f57aa97615c9cac2e4d7b5437a3d0e581
       # is released (post 0.8.1).
     }
@@ -200,7 +199,9 @@
     "msty"
     "lm-studio"
     "superwhisper"
-    
+
+    "proton-mail-bridge"
+
     "topaz-photo-ai"
     "typefully"
     "warp"
@@ -237,6 +238,7 @@
     "easyeda"
     "libreoffice"
 
+    "wifiman"
     "wireshark-app"
     "utm"
 
@@ -295,7 +297,8 @@
     # "UniFi Protect" = 1392492235;
     # "UniFi WiFiman" = 1385561119;
   };
-  vscode' = [ # vscode extensions installed via brew
+  vscode' = [
+    # vscode extensions installed via brew
     "esbenp.prettier-vscode"
     "eamodio.gitlens"
     "continue.continue"
@@ -321,11 +324,12 @@
     "ms-vscode.makefile-tools"
     "ms-vscode.cpptools"
     "ms-vscode.cmake-tools"
+    "ms-vscode.cpptools-extension-pack"
+    "llvm-vs-code-extensions.vscode-clangd"
     "bradlc.vscode-tailwindcss"
     "austenc.tailwind-docs"
     "tauri-apps.tauri-vscode"
     "hashicorp.terraform"
-    "ms-vscode.cpptools-extension-pack"
     "platformio.platformio-ide"
     "ms-vscode-remote.remote-ssh"
     "catppuccin.catppuccin-vsc-pack"
@@ -384,6 +388,17 @@ in {
         "root"
         "${username}"
       ];
+    };
+
+    linux-builder = {
+      enable = true;
+      config = {
+        virtualisation = {
+          darwin-builder = {
+            diskSize = 40 * 1024;
+          };
+        };
+      };
     };
   };
 
@@ -450,7 +465,7 @@ in {
         persistent-apps = [
           # "/System/Cryptexes/App/System/Applications/Safari.app"
           "/Applications/Firefox Developer Edition.app"
-          "/Applications/Proton Mail.app"
+          "${pkgs.thunderbird}/Applications/Thunderbird.app"
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"
           "/Applications/Slack.app"
@@ -513,7 +528,7 @@ in {
             ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
           done
         '';
-      };
+    };
   };
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = system;
@@ -521,13 +536,18 @@ in {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.${username} = {config, lib, ...}: import ./home.nix {
-      inherit config lib stateVersion pkgs username system self;
-      nixvim = inputs.nixvim;
-      homeDirectory =
-        if pkgs.stdenv.isLinux
-        then "/home/${username}"
-        else "/Users/${username}";
-    };
+    users.${username} = {
+      config,
+      lib,
+      ...
+    }:
+      import ./home.nix {
+        inherit config lib stateVersion pkgs username system self;
+        nixvim = inputs.nixvim;
+        homeDirectory =
+          if pkgs.stdenv.isLinux
+          then "/home/${username}"
+          else "/Users/${username}";
+      };
   };
 }

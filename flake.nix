@@ -38,7 +38,7 @@
       inherit (home-manager.lib) homeManagerConfiguration;
       stateVersion = "24.11";
 
-      upkgs = import nixpkgs-unstable{
+      upkgs = import nixpkgs-unstable {
         inherit system;
       };
 
@@ -46,7 +46,6 @@
         personal-overlay.overlays.default
         (final: prev: {
           neovim = upkgs.neovim; # the stable one is way too old for my plugins
-          platformio = upkgs.platformio; # https://github.com/NixOS/nixpkgs/issues/356803
           proxmark3 = upkgs.proxmark3;
         })
       ];

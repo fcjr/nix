@@ -41,13 +41,13 @@
       ".config/yabai".source = ./yabai;
       ".local/bin".source = ./bin;
       ".config/zed/settings.json".source = ./zed/settings.json;
+      ".clangd".source = ./shell/.clangd;
     };
 
     # activation.linkVSCodeSettings = lib.hm.dag.entryAfter ["writeBoundary"] ''
     #   mkdir -p "$HOME/Library/Application Support/Code/User"
     #   ln -sf "$HOME/nix/modules/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
     # '';
-
   };
 
   imports = [

@@ -1,40 +1,43 @@
 {pkgs, ...}:
-with pkgs;
-  [
-    nerd-fonts.meslo-lg
-    nerd-fonts.iosevka
-    nerd-fonts.iosevka-term
-    nerd-fonts.jetbrains-mono
+with pkgs; [
+  nerd-fonts.meslo-lg
+  nerd-fonts.iosevka
+  nerd-fonts.iosevka-term
+  nerd-fonts.jetbrains-mono
 
-    neovim
-    tmux
-    git
-    git-lfs
-    ripgrep
-    fzf
-    zoxide
-    bat
-    btop
+  neovim
+  tmux
+  git
+  git-lfs
+  ripgrep
+  fzf
+  zoxide
+  bat
+  btop
 
-    gh
-    wget
-    thefuck
-    fnm
-    uv
+  gh
+  wget
+  thefuck
+  fnm
+  uv
 
-    oha
-    iperf3
-    
-    platformio
-    avrdude
-    openocd
-    arduino-cli
+  oha
+  iperf3
 
-    rustup
-    docker
-    docker-compose
+  platformio
+  avrdude
+  openocd
+  arduino-cli
 
-    (proxmark3.override { hardwarePlatformExtras = "BTADDON"; })
-    chameleon-ultra-cli
-  ]
+  rustup
+  docker
+  docker-compose
 
+  thunderbird
+
+  (proxmark3.override {hardwarePlatformExtras = "BTADDON";})
+  chameleon-ultra-cli
+
+  presenterm
+  morph
+]

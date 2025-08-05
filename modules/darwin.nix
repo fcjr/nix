@@ -30,6 +30,8 @@
     "fcjr/fcjr"
     "sst/tap"
     "atopile/tap"
+    "fastrepl/hyprnote"
+    "charmbracelet/tap"
   ];
 
   brews' = [
@@ -141,6 +143,7 @@
     "restatedev/tap/restate-server"
     "restatedev/tap/restate"
     "sst/tap/opencode"
+    "charmbracelet/tap/crush"
     "slides"
 
     # Embedded Rust
@@ -270,6 +273,7 @@
 
     "deskpad"
     "blackhole-2ch"
+    "fastrepl/hyprnote/hyprnote"
   ];
   masApps' = {
     "Bitwarden" = 1352778147;
@@ -474,7 +478,7 @@ in {
           # "/Applications/Zed.app"
           "/Applications/Visual Studio Code.app"
           "/Applications/Xcode.app"
-          "/Applications/Msty.app"
+          "/Applications/Ollama.app"
           "/Applications/Claude.app"
           "${pkgs.obsidian}/Applications/Obsidian.app"
           "/Applications/Ghostty.app"

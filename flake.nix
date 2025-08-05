@@ -2,8 +2,7 @@
   description = "darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/25.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     personal-overlay.url = "github:fcjr/nix-overlay/main";
 
     nix-darwin = {
@@ -14,7 +13,7 @@
       url = "github:numtide/flake-utils";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-homebrew = {
@@ -29,7 +28,6 @@
     nix-darwin,
     nix-homebrew,
     nixpkgs,
-    nixpkgs-unstable,
     personal-overlay,
     ...
   }:
@@ -38,16 +36,8 @@
       inherit (home-manager.lib) homeManagerConfiguration;
       stateVersion = "24.11";
 
-      upkgs = import nixpkgs-unstable {
-        inherit system;
-      };
-
       overlays = [
         personal-overlay.overlays.default
-        (final: prev: {
-          neovim = upkgs.neovim; # the stable one is way too old for my plugins
-          proxmark3 = upkgs.proxmark3;
-        })
       ];
 
       pkgs = import nixpkgs {

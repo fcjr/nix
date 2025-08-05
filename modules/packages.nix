@@ -17,7 +17,7 @@ with pkgs; [
 
   gh
   wget
-  thefuck
+  pay-respects
   fnm
   uv
 

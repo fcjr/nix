@@ -48,8 +48,8 @@
       ## FNM (Node Manager)
       eval "$(fnm env)"
 
-      ## The Fuck
-      eval $(thefuck --alias)
+      ## Pay Respects
+      eval "$(pay-respects zsh --alias)"
 
       ## Auto FNM
       autoload -U add-zsh-hook

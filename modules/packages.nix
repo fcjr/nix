@@ -14,6 +14,7 @@ with pkgs; [
   zoxide
   bat
   btop
+  zig
 
   gh
   wget

@@ -85,7 +85,6 @@
     "composer"
 
     "c3c"
-    "zig"
     "cocoapods"
 
     "tesseract"

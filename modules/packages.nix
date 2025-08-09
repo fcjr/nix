@@ -41,4 +41,7 @@ with pkgs; [
 
   presenterm
   morph
+
+  python313Packages.huggingface-hub
+  upscayl
 ]

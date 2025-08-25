@@ -35,9 +35,6 @@
   ];
 
   brews' = [
-    "jj"
-    "go"
-    "golangci-lint"
     {
       name = "colima";
       args = ["HEAD"];
@@ -153,6 +150,8 @@
     "qemu"
 
     "atopile/tap/atopile"
+
+    "fastrepl/hyprnote/owhisper"
   ];
 
   casks' = [
@@ -242,6 +241,7 @@
 
     "wifiman"
     "wireshark-app"
+    "packetsender"
     "utm"
 
     "signal"
@@ -273,6 +273,8 @@
     "deskpad"
     "blackhole-2ch"
     "fastrepl/hyprnote/hyprnote"
+
+    "angry-ip-scanner"
   ];
   masApps' = {
     "Bitwarden" = 1352778147;
@@ -480,6 +482,7 @@ in {
           "/Applications/Ollama.app"
           "/Applications/Claude.app"
           "${pkgs.obsidian}/Applications/Obsidian.app"
+          "/Applications/Hyprnote.app"
           "/Applications/Ghostty.app"
           # "/System/Applications/Notes.app"
           "/System/Applications/System Settings.app"

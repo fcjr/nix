@@ -25,6 +25,7 @@
       "/opt/homebrew/opt/libpq/bin"
       "$HOME/.krew/bin"
       "/opt/homebrew/opt/make/libexec/gnubin"
+      "${pkgs.jdk24}/bin"
     ];
 
     packages = import ./packages.nix {inherit pkgs;};

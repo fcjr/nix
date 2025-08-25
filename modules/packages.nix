@@ -14,7 +14,10 @@ with pkgs; [
   zoxide
   bat
   btop
+  jj
   zig
+  go
+  golangci-lint
 
   gh
   wget
@@ -44,4 +47,20 @@ with pkgs; [
 
   python313Packages.huggingface-hub
   upscayl
+
+  colmena
+  nixos-generators
+  ssh-to-age
+
+  jdk24
+
+  aerospace
+
+  magic-wormhole
+  croc
+
+  chirp
+  # gnuradio
+  hackrf
+  direwolf
 ]

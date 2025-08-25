@@ -397,10 +397,11 @@ in {
 
     linux-builder = {
       enable = true;
+      maxJobs = 4;
       config = {
         virtualisation = {
           darwin-builder = {
-            diskSize = 40 * 1024;
+            diskSize = 80 * 1024;
           };
         };
       };

@@ -14,7 +14,7 @@ with pkgs; [
   zoxide
   bat
   btop
-  jj
+  jujutsu
   zig
   go
   golangci-lint

@@ -236,7 +236,6 @@
     "xtool-creative-space"
     "openscad"
     "autodesk-fusion"
-    "easyeda"
     "libreoffice"
 
     "wifiman"
@@ -263,18 +262,13 @@
     "lunar"
     "logi-options+"
 
-    "headlamp"
-
     "dash"
     "mactex"
     "jupyterlab-app"
-    "livebook"
 
     "deskpad"
     "blackhole-2ch"
     "fastrepl/hyprnote/hyprnote"
-
-    "angry-ip-scanner"
   ];
   masApps' = {
     "Bitwarden" = 1352778147;

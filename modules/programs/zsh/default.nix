@@ -98,6 +98,9 @@
           command nix "$@"
         fi
       }
+
+      ## ensure homebrew takes precedence
+      export PATH="/opt/homebrew/bin:$PATH"
     '';
 
     oh-my-zsh = {

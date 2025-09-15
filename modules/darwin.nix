@@ -11,8 +11,6 @@
     mkalias
 
     obsidian
-
-    spotify
   ];
 
   taps' = [
@@ -190,6 +188,7 @@
     "audacity"
     "opal-composer"
     "sf-symbols"
+    "spotify"
 
     "1password"
     "1password-cli"

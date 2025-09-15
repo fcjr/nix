@@ -1,4 +1,4 @@
-theme = catppuccin-frappe
+theme = "Catppuccin Frappe"
 font-family = "MesloLGSDZ Nerd Font"
 
 # use ctrl to quick nav to tabs

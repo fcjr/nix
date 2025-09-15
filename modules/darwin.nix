@@ -237,6 +237,7 @@
     "openscad"
     "autodesk-fusion"
     "libreoffice"
+    "universal-gcode-platform"
 
     "wifiman"
     "wireshark-app"
@@ -269,6 +270,9 @@
     "deskpad"
     "blackhole-2ch"
     "fastrepl/hyprnote/hyprnote"
+    "linear-linear"
+
+    "feed-the-beast"
   ];
   masApps' = {
     "Bitwarden" = 1352778147;

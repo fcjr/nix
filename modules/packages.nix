@@ -6,6 +6,7 @@ with pkgs; [
   nerd-fonts.jetbrains-mono
 
   neovim
+  helix
   tmux
   git
   git-lfs

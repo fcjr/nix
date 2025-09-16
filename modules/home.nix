@@ -32,7 +32,7 @@
 
     file = {
       ".hushlogin".text = "";
-      ".config/ghostty/config".source = ./ghostty/config;
+      ".config/ghostty/".source = ./ghostty;
       ".gitconfig".source = ./shell/.gitconfig;
       ".work.gitconfig".source = ./shell/.work.gitconfig;
       ".tmux.conf".source = ./shell/.tmux.conf;

@@ -468,7 +468,7 @@ in {
         persistent-apps = [
           # "/System/Cryptexes/App/System/Applications/Safari.app"
           "/Applications/Firefox Developer Edition.app"
-          "${pkgs.thunderbird}/Applications/Thunderbird.app"
+          "/Applications/Proton Mail.app"
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"
           "/Applications/Slack.app"

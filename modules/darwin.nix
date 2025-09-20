@@ -75,6 +75,7 @@
 
     "nsis"
     "upx"
+    "wails"
 
     "php"
     "composer"

@@ -1,30 +1,51 @@
 {
-    "workbench.iconTheme": "catppuccin-frappe",
-    "workbench.colorTheme": "Catppuccin Frappé",
-    "workbench.sideBar.location": "right",
-    "workbench.startupEditor": "none",
-    "editor.tokenColorCustomizations": {
-        "textMateRules": []
+  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "go.toolsManagement.autoUpdate": true,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+  },
+  "continue.telemetryEnabled": false,
+  "redhat.telemetry.enabled": false,
+  "makefile.configureOnOpen": true,
+  "editor.lineNumbers": "relative",
+  "terminal.integrated.env.osx": {},
+  "zig.zls.enabled": "on",
+  "svelte.enable-ts-plugin": true,
+  "python.languageServer": "Pylance",
+  "mypy-type-checker.args": ["--check-untyped-defs"],
+  // "python.languageServer": "Pylance",
+  "ruff.nativeServer": "on",
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+  "editor.lineHeight": 0,
+  "editor.fontSize": 15,
+  "git.blame.editorDecoration.enabled": true,
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
     },
-    "editor.linkedEditing": true,
-    "editor.minimap.enabled": false,
-    "go.toolsManagement.autoUpdate": true,
-    "github.copilot.editor.enableAutoCompletions": true,
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false
-    },
-    "[rust]": {
-        "editor.defaultFormatter": "rust-lang.rust-analyzer",
-        "editor.formatOnSave": true
-    },
-    "continue.telemetryEnabled": false,
-    "redhat.telemetry.enabled": false,
-    "makefile.configureOnOpen": true,
-    "editor.lineNumbers": "relative",
-    "terminal.integrated.env.osx": {},
-    "zig.zls.enabled": "on",
-    "svelte.enable-ts-plugin": true
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "continue.enableConsole": true
 }

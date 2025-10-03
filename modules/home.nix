@@ -19,6 +19,7 @@
       "$HOME/go/bin"
       "$HOME/.cargo/bin"
       "$HOME/.local/bin"
+      "$HOME/.nix-managed-scripts/bin"
       "$HOME/Library/Android/sdk/tools"
       "$HOME/Library/Android/sdk/tools/bin"
       "$HOME/Library/Android/sdk/platform-tools"
@@ -40,7 +41,7 @@
       ".config/nvim".source = ./nvim;
       ".config/skhd".source = ./skhd;
       ".config/yabai".source = ./yabai;
-      ".local/bin".source = ./bin;
+      ".nix-managed-scripts/bin".source = ./bin;
       ".config/zed/settings.json".source = ./zed/settings.json;
       ".clangd".source = ./shell/.clangd;
     };

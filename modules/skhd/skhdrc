@@ -27,8 +27,8 @@ shift + alt - 6 : yabai -m window --space 6
 shift + alt - 7 : yabai -m window --space 7
 shift + alt - 8 : yabai -m window --space 8
 
-# alt - return : ~/.local/bin/ghostty-new-window.sh
-alt - w : ~/.local/bin/firefox-new-window.sh
+# alt - return : ~/.nix-managed-scripts/bin/ghostty-new-window.sh
+alt - w : ~/.nix-managed-scripts/bin/firefox-new-window.sh
 
 shift + alt - q : yabai --stop-service
 shift + alt - s : yabai --start-service

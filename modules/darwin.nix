@@ -66,6 +66,9 @@
     "zx"
     "fcjr/fcjr/git-vibe"
     "duckdb"
+    "elixir"
+    "gleam"
+    "rebar3"
 
     "hackrf"
     "gnuradio"
@@ -138,6 +141,7 @@
     "restatedev/tap/restate-server"
     "restatedev/tap/restate"
     "sst/tap/opencode"
+    "codex"
     "charmbracelet/tap/crush"
     "slides"
 
@@ -200,6 +204,7 @@
     "msty"
     "lm-studio"
     "superwhisper"
+    "comfyui"
 
     "proton-mail-bridge"
 
@@ -255,6 +260,7 @@
     "moonlight"
     "epilogue-playback"
 
+    "iina"
     "pocket-casts"
     # "herd" # PHP env manager by Laravel
 

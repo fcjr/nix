@@ -281,6 +281,7 @@
     "feed-the-beast"
 
     "ExcalidrawZ"
+    "grandperspective"
   ];
   masApps' = {
     "Bitwarden" = 1352778147;

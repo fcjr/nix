@@ -488,7 +488,7 @@ in {
           "${pkgs.obsidian}/Applications/Obsidian.app"
           "/Applications/Hyprnote.app"
           "/Applications/Ghostty.app"
-          # "/System/Applications/Notes.app"
+          "/Applications/Typefully.app"
           "/System/Applications/System Settings.app"
         ];
         show-recents = false;

@@ -352,7 +352,6 @@
     "johnpapa.vscode-cloak"
     "toba.vsfire"
     "svelte.svelte-vscode"
-    "inlang.vs-code-extension"
     "expo.vscode-expo-tools"
     "davidanson.vscode-markdownlint"
     "firefox-devtools.vscode-firefox-debug"
@@ -376,9 +375,6 @@
     "ms-toolsai.jupyter-renderers"
     "ms-toolsai.vscode-jupyter-cell-tags"
     "ms-toolsai.vscode-jupyter-slideshow"
-    "fosshaas.fontsize-shortcuts"
-    "marp-team.marp-vscode"
-    "atopile.atopile"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

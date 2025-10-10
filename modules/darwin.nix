@@ -168,6 +168,7 @@
   casks' = [
     "firefox"
     "firefox@developer-edition"
+    "thunderbird"
     "tor-browser"
     "google-chrome"
     "brave-browser"

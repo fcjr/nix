@@ -38,7 +38,7 @@ with pkgs; [
   docker
   docker-compose
 
-  thunderbird
+  # thunderbird
 
   (proxmark3.override {hardwarePlatformExtras = "BTADDON";})
   chameleon-ultra-cli
@@ -65,6 +65,6 @@ with pkgs; [
 
   chirp
   # gnuradio
-  hackrf
+  # hackrf
   # direwolf
 ]

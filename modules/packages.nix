@@ -54,7 +54,7 @@ with pkgs; [
   nixos-generators
   ssh-to-age
 
-  jdk24
+  jdk25
 
   aerospace
 
@@ -66,5 +66,5 @@ with pkgs; [
   chirp
   # gnuradio
   hackrf
-  direwolf
+  # direwolf
 ]

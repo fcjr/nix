@@ -56,7 +56,15 @@
     "xataio/pgroll/pgroll"
     "ariga/tap/atlas"
     "dbmate"
+    "autoconf"
+    "autoconf-archive"
+    "automake"
+    "ccache"
     "cmake"
+    "libtool"
+    "nasm"
+    "ninja"
+    "pkg-config"
     "just"
     "wasmtime"
     "act"
@@ -238,7 +246,7 @@
     "affinity-photo"
     "affinity-publisher"
     "figma"
-    "xtool-creative-space"
+    "xtool-studio"
     "openscad"
     "autodesk-fusion"
     "libreoffice"
@@ -535,7 +543,7 @@ in {
           while read -r src; do
             app_name=$(basename "$src")
             echo "copying $src" >&2
-            ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
+            ${pkgs.mkalias}/bin/mkalias "$src" "npp_name"
           done
         '';
     };

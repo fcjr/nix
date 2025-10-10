@@ -225,6 +225,7 @@
     "raspberry-pi-imager"
     "dbngin"
     "tableplus"
+    "dataflare"
     "dbeaver-community"
     "visual-studio-code"
     "zed"

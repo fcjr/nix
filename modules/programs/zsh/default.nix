@@ -99,6 +99,11 @@
         fi
       }
 
+      # update all ollama models
+      func ollama-update-all() {
+        ollama list | awk 'NR>1 {print $1}' | xargs -I {} sh -c 'echo "Updating model: {}"; ollama pull {}; echo "--"' && echo "All models updated."
+      }
+
       ## ensure homebrew takes precedence
       export PATH="/opt/homebrew/bin:$PATH"
     '';

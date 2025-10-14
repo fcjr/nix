@@ -388,6 +388,9 @@
     "ms-toolsai.jupyter-renderers"
     "ms-toolsai.vscode-jupyter-cell-tags"
     "ms-toolsai.vscode-jupyter-slideshow"
+    "jakebecker.elixir-ls"
+    "phoenixframework.phoenix"
+    "samuel-pordeus.elixir-test"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

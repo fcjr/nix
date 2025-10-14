@@ -47,6 +47,9 @@
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "emmet.includeLanguages": {
+    "phoenix-heex": "html"
+  },
   "continue.enableConsole": true,
   "yaml.schemas": {
     "file:///Users/fcjr/.vscode/extensions/continue.continue-1.2.8-darwin-arm64/config-yaml-schema.json": [

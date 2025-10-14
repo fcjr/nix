@@ -205,6 +205,7 @@
     "opal-composer"
     "sf-symbols"
     "spotify"
+    "cyberduck"
 
     "1password"
     "1password-cli"

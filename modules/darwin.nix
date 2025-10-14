@@ -163,6 +163,8 @@
     "atopile/tap/atopile"
 
     "fastrepl/hyprnote/owhisper"
+
+    "turso"
   ];
 
   casks' = [

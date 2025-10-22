@@ -96,6 +96,7 @@
 
     "tesseract"
     "ffmpeg"
+    "onnxruntime"
 
     "ansible"
     "kubernetes-cli"

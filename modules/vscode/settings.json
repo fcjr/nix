@@ -25,8 +25,14 @@
   "zig.zls.enabled": "on",
   "svelte.enable-ts-plugin": true,
   "python.languageServer": "Pylance",
+  "python.analysis.inlayHints.variableTypes": true,
   "mypy-type-checker.args": ["--check-untyped-defs"],
-  // "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "standard",
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "notebook.output.wordWrap": true,
   "ruff.nativeServer": "on",
   "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
   "editor.lineHeight": 0,
@@ -56,9 +62,5 @@
     "file:///Users/fcjr/.vscode/extensions/continue.continue-1.2.10-darwin-arm64/config-yaml-schema.json": [
       ".continue/**/*.yaml"
     ]
-  },
-  "[python]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "charliermarsh.ruff"
   }
 }

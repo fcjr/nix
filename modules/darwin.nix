@@ -39,6 +39,7 @@
       # can be reverted once https://github.com/abiosoft/colima/commit/e65e6c6f57aa97615c9cac2e4d7b5437a3d0e581
       # is released (post 0.8.1).
     }
+    "rbenv"
     "mas"
     "sqlc"
     "readline"
@@ -166,6 +167,9 @@
     "fastrepl/hyprnote/owhisper"
 
     "turso"
+    "jj"
+
+    "fontforge"
   ];
 
   casks' = [
@@ -316,6 +320,10 @@
     "Apple Developer" = 640199958;
     "Chameleon Ultra GUI" = 6462919364;
     "Amazon Kindle" = 302584613;
+
+    "1Password for Safari" = 1569813296;
+    "uBlock Origin Lite" = 6745342698;
+    "Web Archives for Safari" = 1603181853;
 
     # mas cant install made for iOS apps atm
     # see: https://github.com/mas-cli/mas/issues/321
@@ -489,8 +497,8 @@ in {
       dock = {
         mru-spaces = false; # Don't rearrange spaces based on most recent use
         persistent-apps = [
-          # "/System/Cryptexes/App/System/Applications/Safari.app"
-          "/Applications/Firefox Developer Edition.app"
+          "/System/Cryptexes/App/System/Applications/Safari.app"
+          # "/Applications/Firefox Developer Edition.app"
           "/Applications/Proton Mail.app"
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"

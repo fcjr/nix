@@ -106,6 +106,9 @@
 
       ## ensure homebrew takes precedence
       export PATH="/opt/homebrew/bin:$PATH"
+
+      ## RUBY!
+      eval "$(rbenv init - --no-rehash zsh)"
     '';
 
     oh-my-zsh = {

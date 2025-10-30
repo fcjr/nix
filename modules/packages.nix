@@ -15,7 +15,6 @@ with pkgs; [
   zoxide
   bat
   btop
-  jujutsu
   zig
   go
   golangci-lint

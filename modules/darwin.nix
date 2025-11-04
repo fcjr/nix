@@ -519,14 +519,18 @@ in {
         show-recents = false;
         persistent-others = [
           {
-            path = "~/Applications";
-            displayas = "folder";
+            folder = {
+              path = "~/Applications";
+              displayas = "folder";
+            };
           }
           {
-            path = "/Users/${username}/Downloads";
-            displayas = "folder";
-            arrangement = "date-added";
-            showas = "fan";
+            folder = {
+              path = "/Users/${username}/Downloads";
+              displayas = "folder";
+              arrangement = "date-added";
+              showas = "fan";
+            };
           }
         ];
       };

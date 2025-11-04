@@ -217,6 +217,7 @@
 
     "ollama-app"
     "claude"
+    "claude-code"
     "chatgpt"
     "msty"
     "lm-studio"

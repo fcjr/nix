@@ -47,7 +47,6 @@ with pkgs; [
 
   python313Packages.huggingface-hub
   upscayl
-  claude-code
 
   colmena
   nixos-generators

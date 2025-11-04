@@ -44,7 +44,11 @@
       [[ ! -f ~/.secrets ]] || source ~/.secrets
 
       ## Zoxide
-      eval "$(zoxide init zsh --cmd cd)"
+      if [[ -o interactive ]]; then
+        eval "$(zoxide init zsh --cmd cd)"
+      else
+        eval "$(zoxide init zsh)"
+      fi
 
       ## FNM (Node Manager)
       eval "$(fnm env)"

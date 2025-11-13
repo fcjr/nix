@@ -36,6 +36,7 @@
       ".hushlogin".text = "";
       ".config/ghostty/".source = ./ghostty;
       ".gitconfig".source = ./shell/.gitconfig;
+      ".config/git/attributes".source = ./shell/gitattributes;
       ".work.gitconfig".source = ./shell/.work.gitconfig;
       ".tmux.conf".source = ./shell/.tmux.conf;
       ".config/btop/btop.conf".source = ./shell/btop.conf;

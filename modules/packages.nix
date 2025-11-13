@@ -10,6 +10,7 @@ with pkgs; [
   tmux
   git
   git-lfs
+  mergiraf
   ripgrep
   fzf
   zoxide

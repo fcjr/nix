@@ -168,6 +168,7 @@
 
     "turso"
     "jj"
+    "flyctl"
 
     "fontforge"
   ];
@@ -233,6 +234,7 @@
     "unraid-usb-creator-next"
     "balenaetcher"
     "raspberry-pi-imager"
+    "tigervnc-viewer"
     "dbngin"
     "tableplus"
     "dataflare"
@@ -244,7 +246,7 @@
     "wch-ch34x-usb-serial-driver"
     "serial"
 
-    "gcc-arm-embedded"
+    # "gcc-arm-embedded"
     "nordic-nrf-command-line-tools"
     "arduino-ide"
     "qflipper"
@@ -301,8 +303,11 @@
 
     "ExcalidrawZ"
     "grandperspective"
+
+    "vlc"
   ];
   masApps' = {
+    "Amphetamine" = 937984704;
     "Bitwarden" = 1352778147;
     "Pure Paste" = 1611378436;
     "AdGuard for Safari" = 1440147259;
@@ -378,7 +383,6 @@
     "expo.vscode-expo-tools"
     "davidanson.vscode-markdownlint"
     "firefox-devtools.vscode-firefox-debug"
-    "redocly.openapi-vs-code"
     "chanhx.crabviz"
     "bytecodealliance.wit-idl"
     "ziglang.vscode-zig"
@@ -401,6 +405,7 @@
     "jakebecker.elixir-ls"
     "phoenixframework.phoenix"
     "samuel-pordeus.elixir-test"
+    "marimo-team.vscode-marimo"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

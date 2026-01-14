@@ -1,7 +1,7 @@
 theme = "Catppuccin Frappe"
 font-family = "MesloLGSDZ Nerd Font"
 
-custom-shader = shaders/cursor.glsl
+# custom-shader = shaders/cursor.glsl
 
 # use ctrl to quick nav to tabs
 keybind = ctrl+physical:one=goto_tab:1

@@ -51,9 +51,6 @@
         eval "$(zoxide init zsh)"
       fi
 
-      ## FNM (Node Manager)
-      eval "$(fnm env)"
-
       ## Pay Respects
       eval "$(pay-respects zsh --alias)"
 
@@ -111,6 +108,9 @@
 
       ## ensure homebrew takes precedence
       export PATH="/opt/homebrew/bin:$PATH"
+
+      ## FNM (Node Manager)
+      eval "$(fnm env)"
 
       ## RUBY!
       eval "$(rbenv init - --no-rehash zsh)"

@@ -507,7 +507,7 @@ in {
         mru-spaces = false; # Don't rearrange spaces based on most recent use
         persistent-apps = [
           "/System/Cryptexes/App/System/Applications/Safari.app"
-          # "/Applications/Firefox Developer Edition.app"
+          "/Applications/Firefox Developer Edition.app"
           "/Applications/Proton Mail.app"
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"

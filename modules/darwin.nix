@@ -30,6 +30,7 @@
     "atopile/tap"
     "fastrepl/hyprnote"
     "charmbracelet/tap"
+    "mobile-dev-inc/tap"
   ];
 
   brews' = [
@@ -94,6 +95,8 @@
 
     "c3c"
     "cocoapods"
+    "openjdk@17"
+    "mobile-dev-inc/tap/maestro"
 
     "tesseract"
     "ffmpeg"

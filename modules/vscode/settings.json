@@ -6,6 +6,7 @@
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "go.toolsManagement.autoUpdate": true,
+  "tasks.allowAutomaticTasks": "off",
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
     "*": true,

@@ -174,6 +174,7 @@
     "flyctl"
 
     "fontforge"
+    "scrcpy"
   ];
 
   casks' = [

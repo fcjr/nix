@@ -229,7 +229,7 @@
     "superwhisper"
     "comfyui"
 
-    "proton-mail-bridge"
+    # "proton-mail-bridge"
 
     "topaz-photo-ai"
     "typefully"

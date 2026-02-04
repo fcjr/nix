@@ -130,6 +130,10 @@
       k = "kubectl";
       ksn = "kubectl config set-context --current --namespace";
       nix-shell = "nix-shell --command zsh";
+      cc = "claude --allow-dangerously-skip-permissions";
+      ccr = "claude --allow-dangerously-skip-permissions --resume";
+      ccc = "claude --allow-dangerously-skip-permissions --continue";
+      ccp = "claude --allow-dangerously-skip-permissions --print";
     };
   };
 

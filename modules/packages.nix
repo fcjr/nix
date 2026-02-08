@@ -60,7 +60,6 @@ with pkgs; [
   magic-wormhole
   croc
 
-  yt-dlp
 
   chirp
   # gnuradio

@@ -62,6 +62,9 @@
   "yaml.schemas": {
     "file:///Users/fcjr/.vscode/extensions/continue.continue-1.2.10-darwin-arm64/config-yaml-schema.json": [
       ".continue/**/*.yaml"
+    ],
+    "file:///Users/fcjr/.vscode/extensions/continue.continue-1.2.14-darwin-arm64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
     ]
   },
   "[typescript]": {

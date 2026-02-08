@@ -175,6 +175,7 @@
 
     "fontforge"
     "scrcpy"
+    "yt-dlp"
   ];
 
   casks' = [

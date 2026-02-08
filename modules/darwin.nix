@@ -215,6 +215,7 @@
     "audacity"
     "opal-composer"
     "sf-symbols"
+    "sonos"
     "spotify"
     "cyberduck"
 

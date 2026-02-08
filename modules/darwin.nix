@@ -241,7 +241,7 @@
     "unraid-usb-creator-next"
     "balenaetcher"
     "raspberry-pi-imager"
-    "tigervnc-viewer"
+    "tigervnc"
     "dbngin"
     "tableplus"
     "dataflare"

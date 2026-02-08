@@ -4,6 +4,9 @@ with pkgs; [
   nerd-fonts.iosevka
   nerd-fonts.iosevka-term
   nerd-fonts.jetbrains-mono
+  maple-mono.truetype
+  # Maple Mono NF (Ligature unhinted)
+  maple-mono.NF-unhinted
 
   neovim
   helix

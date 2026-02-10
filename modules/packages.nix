@@ -7,6 +7,8 @@ with pkgs; [
   maple-mono.truetype
   # Maple Mono NF (Ligature unhinted)
   maple-mono.NF-unhinted
+  commit-mono
+  nerd-fonts.commit-mono
 
   neovim
   helix

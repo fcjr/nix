@@ -1,5 +1,5 @@
 theme = "Catppuccin Frappe"
-font-family = "MesloLGSDZ Nerd Font"
+font-family = "CommitMono Nerd Font Mono"
 
 # custom-shader = shaders/cursor.glsl
 

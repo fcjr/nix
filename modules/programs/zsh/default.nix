@@ -54,6 +54,9 @@
       ## Pay Respects
       eval "$(pay-respects zsh --alias)"
 
+      ## FNM (Node Manager)
+      eval "$(fnm env)"
+
       ## Auto FNM
       autoload -U add-zsh-hook
       # place default node version under $HOME/.node_version
@@ -108,9 +111,6 @@
 
       ## ensure homebrew takes precedence
       export PATH="/opt/homebrew/bin:$PATH"
-
-      ## FNM (Node Manager)
-      eval "$(fnm env)"
 
       ## RUBY!
       eval "$(rbenv init - --no-rehash zsh)"

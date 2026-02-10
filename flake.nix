@@ -6,7 +6,7 @@
     personal-overlay.url = "github:fcjr/nix-overlay/main";
 
     nix-darwin = {
-      url = "github:fcjr/nix-darwin/master";
+      url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-utils = {

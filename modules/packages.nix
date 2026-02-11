@@ -66,6 +66,8 @@ with pkgs; [
   magic-wormhole
   croc
 
+  imagemagick
+
 
   chirp
   # gnuradio

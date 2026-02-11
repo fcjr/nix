@@ -21,7 +21,7 @@
   "continue.telemetryEnabled": false,
   "redhat.telemetry.enabled": false,
   "makefile.configureOnOpen": true,
-  "editor.lineNumbers": "relative",
+  "editor.lineNumbers": "on",
   "terminal.integrated.fontFamily": "CommitMono Nerd Font Mono",
   "terminal.integrated.env.osx": {},
   "zig.zls.enabled": "on",

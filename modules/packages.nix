@@ -26,6 +26,7 @@ with pkgs; [
   golangci-lint
 
   gh
+  flarectl
   wget
   pay-respects
   fnm

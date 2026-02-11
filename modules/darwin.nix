@@ -385,6 +385,7 @@
     "bierner.markdown-mermaid"
     "mikestead.dotenv"
     "johnpapa.vscode-cloak"
+    "typespec.typespec-vscode"
     "toba.vsfire"
     "svelte.svelte-vscode"
     "expo.vscode-expo-tools"

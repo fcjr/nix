@@ -9,6 +9,7 @@ with pkgs; [
   maple-mono.NF-unhinted
   commit-mono
   nerd-fonts.commit-mono
+  but-head
 
   neovim
   helix

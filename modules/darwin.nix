@@ -95,6 +95,7 @@
 
     "c3c"
     "cocoapods"
+    "xcodegen"
     "openjdk@17"
     "mobile-dev-inc/tap/maestro"
 

@@ -529,6 +529,7 @@ in {
           "/Applications/Hyprnote.app"
           "/Applications/Ghostty.app"
           "/Applications/Typefully.app"
+          "/System/Applications/Notes.app"
           "/System/Applications/System Settings.app"
         ];
         show-recents = false;

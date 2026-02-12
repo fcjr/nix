@@ -41,6 +41,9 @@
 
     initContent = ''
 
+      ## Disable the log builtin so /usr/bin/log doesn't get shadowed
+      disable log
+
       ## Secrets
       [[ ! -f ~/.secrets ]] || source ~/.secrets
 

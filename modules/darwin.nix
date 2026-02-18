@@ -416,6 +416,7 @@
     "phoenixframework.phoenix"
     "samuel-pordeus.elixir-test"
     "marimo-team.vscode-marimo"
+    "biomejs.biome"
   ];
 in {
   # List packages installed in system profile. To search by name, run:

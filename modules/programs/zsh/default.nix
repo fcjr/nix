@@ -112,6 +112,9 @@
         ollama list | awk 'NR>1 {print $1}' | xargs -I {} sh -c 'echo "Updating model: {}"; ollama pull {}; echo "--"' && echo "All models updated."
       }
 
+      ## kill process on port
+      killport() { lsof -ti :$1 | xargs kill -9 }
+
       ## ensure homebrew takes precedence
       export PATH="/opt/homebrew/bin:$PATH"
 

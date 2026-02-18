@@ -227,6 +227,7 @@
     "claude"
     "claude-code"
     "codex-app"
+    "opencode-desktop"
     "chatgpt"
     "msty"
     "lm-studio"

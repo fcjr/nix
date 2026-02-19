@@ -515,14 +515,15 @@ in {
         mru-spaces = false; # Don't rearrange spaces based on most recent use
         persistent-apps = [
           "/Applications/Helium.app"
+          "/Applications/Firefox Developer Edition.app"
           "/Applications/Proton Mail.app"
           "/System/Applications/Messages.app"
           "/Applications/Signal.app"
           "/Applications/Slack.app"
           "/Applications/Zulip.app"
           "/Applications/TablePlus.app"
-          # "/Applications/Zed.app"
-          "/Applications/Visual Studio Code.app"
+          "/Applications/Zed.app"
+          # "/Applications/Visual Studio Code.app"
           "/Applications/Xcode.app"
           "/Applications/Ollama.app"
           "/Applications/Claude.app"

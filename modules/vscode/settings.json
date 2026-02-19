@@ -1,7 +1,6 @@
 {
   "workbench.iconTheme": "catppuccin-frappe",
   "workbench.colorTheme": "Catppuccin Frappé",
-  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
@@ -14,6 +13,7 @@
     "markdown": false,
     "scminput": false
   },
+  "editor.formatOnSave": true,
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.formatOnSave": true
@@ -67,10 +67,23 @@
     ],
     "file:///Users/fcjr/.vscode/extensions/continue.continue-1.2.14-darwin-arm64/config-yaml-schema.json": [
       ".continue/**/*.yaml"
+    ],
+    "file:///Users/fcjr/.vscode/extensions/continue.continue-1.2.16-darwin-arm64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
     ]
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "claudeCode.preferredLocation": "panel",
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  },
+  "workbench.sideBar.location": "right"
 }

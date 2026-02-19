@@ -8,7 +8,11 @@
   system,
   self,
   ...
-}: {
+}:
+let
+  inherit (config.lib.file) mkOutOfStoreSymlink;
+in
+{
   xdg.enable = true;
   fonts.fontconfig.enable = true;
 
@@ -44,14 +48,14 @@
       ".config/skhd".source = ./skhd;
       ".config/yabai".source = ./yabai;
       ".nix-managed-scripts/bin".source = ./bin;
-      ".config/zed/settings.json".source = ./zed/settings.json;
       ".clangd".source = ./shell/.clangd;
-    };
 
-    # activation.linkVSCodeSettings = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    #   mkdir -p "$HOME/Library/Application Support/Code/User"
-    #   ln -sf "$HOME/nix/modules/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-    # '';
+      # Out-of-store symlinks (edits take effect without rebuild)
+      ".config/zed/settings.json".source = mkOutOfStoreSymlink "${homeDirectory}/nix/modules/zed/settings.json";
+      "Library/Application Support/Code/User/settings.json".source = mkOutOfStoreSymlink "${homeDirectory}/nix/modules/vscode/settings.json";
+      ".agents/skills".source = mkOutOfStoreSymlink "${homeDirectory}/nix/modules/skills";
+      ".claude/skills".source = mkOutOfStoreSymlink "${homeDirectory}/nix/modules/skills";
+    };
   };
 
   imports = [

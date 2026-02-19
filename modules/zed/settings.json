@@ -11,8 +11,9 @@
   "agent": {
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-opus-4-6"
     },
+    "dock": "right"
   },
   "telemetry": {
     "metrics": false,
@@ -31,6 +32,6 @@
     "font_family": "CommitMono Nerd Font Mono"
   },
   "project_panel": {
-    "dock": "right"
+    "dock": "left"
   }
 }

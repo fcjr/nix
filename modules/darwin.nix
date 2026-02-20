@@ -397,6 +397,7 @@
     "davidanson.vscode-markdownlint"
     "firefox-devtools.vscode-firefox-debug"
     "chanhx.crabviz"
+    "highagency.pencildev"
     "bytecodealliance.wit-idl"
     "ziglang.vscode-zig"
     "redhat.vscode-yaml"

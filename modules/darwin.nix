@@ -354,7 +354,6 @@
     "esbenp.prettier-vscode"
     "eamodio.gitlens"
     "continue.continue"
-    "saoudrizwan.claude-dev"
     "anthropic.claude-code"
     "ms-azuretools.vscode-containers"
     "ms-azuretools.vscode-docker"

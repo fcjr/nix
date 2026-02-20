@@ -11,27 +11,22 @@
   "agent": {
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-opus-4-6"
+      "model": "claude-opus-4-6",
     },
-    "dock": "right"
+    "dock": "right",
   },
   "telemetry": {
     "metrics": false,
-    "diagnostics": false
+    "diagnostics": false,
   },
   "ui_font_size": 14,
   "buffer_font_size": 14,
-  "theme": {
-    "mode": "system",
-    "light": "Catppuccin Frappé",
-    "dark": "Catppuccin Frappé"
-  },
   "ui_font_family": "CommitMono Nerd Font",
   "buffer_font_family": "CommitMono Nerd Font Mono",
   "terminal": {
-    "font_family": "CommitMono Nerd Font Mono"
+    "font_family": "CommitMono Nerd Font Mono",
   },
   "project_panel": {
-    "dock": "left"
-  }
+    "dock": "left",
+  },
 }

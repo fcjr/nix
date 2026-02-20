@@ -31,6 +31,7 @@
     "fastrepl/hyprnote"
     "charmbracelet/tap"
     "mobile-dev-inc/tap"
+    "manaflow-ai/cmux"
   ];
 
   brews' = [
@@ -314,6 +315,8 @@
     "grandperspective"
 
     "vlc"
+
+    "manaflow-ai/cmux/cmux"
   ];
   masApps' = {
     "Amphetamine" = 937984704;
@@ -530,6 +533,7 @@ in {
           "/Applications/Codex.app"
           "${pkgs.obsidian}/Applications/Obsidian.app"
           "/Applications/Hyprnote.app"
+          "/Applications/cmux.app"
           "/Applications/Ghostty.app"
           "/Applications/Typefully.app"
           "/System/Applications/Notes.app"

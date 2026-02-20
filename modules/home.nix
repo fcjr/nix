@@ -55,6 +55,8 @@ in
       "Library/Application Support/Code/User/settings.json".source = mkOutOfStoreSymlink "${homeDirectory}/nix/modules/vscode/settings.json";
       ".agents/skills".source = mkOutOfStoreSymlink "${homeDirectory}/nix/modules/skills";
       ".claude/skills".source = mkOutOfStoreSymlink "${homeDirectory}/nix/modules/skills";
+      ".claude/hooks".source = mkOutOfStoreSymlink "${homeDirectory}/nix/modules/claude/hooks";
+      ".claude/settings.json".source = mkOutOfStoreSymlink "${homeDirectory}/nix/modules/claude/settings.json";
     };
   };
 

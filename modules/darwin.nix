@@ -156,7 +156,6 @@
     "restatedev/tap/restate-server"
     "restatedev/tap/restate"
     "sst/tap/opencode"
-    "codex"
     "charmbracelet/tap/crush"
     "slides"
 
@@ -227,6 +226,7 @@
     "ollama-app"
     "claude"
     "claude-code"
+    "codex"
     "codex-app"
     "opencode-desktop"
     "chatgpt"

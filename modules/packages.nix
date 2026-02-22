@@ -56,6 +56,7 @@ with pkgs; [
   python313Packages.huggingface-hub
   upscayl
 
+  nixfmt
   colmena
   nixos-generators
   ssh-to-age

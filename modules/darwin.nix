@@ -333,7 +333,6 @@
     "Windows App" = 1295203466; # Windows Remote Desktop rebrand
     "Yubico Authenticator" = 1497506650;
     "Reeder." = 6475002485;
-    "Enchanted LLM" = 6474268307;
     "Openterface Mini-KVM" = 6478481082;
     "Apple Developer" = 640199958;
     "Chameleon Ultra GUI" = 6462919364;

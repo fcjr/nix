@@ -318,6 +318,7 @@ let
     "vlc"
 
     "manaflow-ai/cmux/cmux"
+    "helium-browser"
   ];
   masApps' = {
     "Amphetamine" = 937984704;

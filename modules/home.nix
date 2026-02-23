@@ -8,11 +8,9 @@
   system,
   self,
   ...
-}:
-let
+}: let
   inherit (config.lib.file) mkOutOfStoreSymlink;
-in
-{
+in {
   xdg.enable = true;
   fonts.fontconfig.enable = true;
 

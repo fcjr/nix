@@ -70,7 +70,6 @@ with pkgs; [
 
   imagemagick
 
-
   chirp
   # gnuradio
   # hackrf

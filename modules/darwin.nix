@@ -6,7 +6,8 @@
   stateVersion,
   self,
   ...
-} @ inputs: let
+}@inputs:
+let
   packages' = with pkgs; [
     mkalias
 
@@ -37,7 +38,7 @@
   brews' = [
     {
       name = "colima";
-      args = ["HEAD"];
+      args = [ "HEAD" ];
       # can be reverted once https://github.com/abiosoft/colima/commit/e65e6c6f57aa97615c9cac2e4d7b5437a3d0e581
       # is released (post 0.8.1).
     }
@@ -420,7 +421,8 @@
     "marimo-team.vscode-marimo"
     "biomejs.biome"
   ];
-in {
+in
+{
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = packages';
@@ -456,10 +458,7 @@ in {
   };
 
   users.users.${username} = {
-    home =
-      if pkgs.stdenv.isLinux
-      then "/home/${username}"
-      else "/Users/${username}";
+    home = if pkgs.stdenv.isLinux then "/home/${username}" else "/Users/${username}";
   };
 
   # Create /etc/zshrc that loads the nix-darwin environment.
@@ -570,13 +569,14 @@ in {
         defaults write com.apple.security.authorization ignoreArd -bool TRUE
       '';
 
-      applications.text = let
-        env = pkgs.buildEnv {
-          name = "system-applications";
-          paths = packages';
-          pathsToLink = [ "/Applications" ];
-        };
-      in
+      applications.text =
+        let
+          env = pkgs.buildEnv {
+            name = "system-applications";
+            paths = packages';
+            pathsToLink = [ "/Applications" ];
+          };
+        in
         pkgs.lib.mkForce ''
           # Set up applications.
           echo "setting up /Applications..." >&2
@@ -597,18 +597,24 @@ in {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.${username} = {
-      config,
-      lib,
-      ...
-    }:
+    users.${username} =
+      {
+        config,
+        lib,
+        ...
+      }:
       import ./home.nix {
-        inherit config lib stateVersion pkgs username system self;
+        inherit
+          config
+          lib
+          stateVersion
+          pkgs
+          username
+          system
+          self
+          ;
         nixvim = inputs.nixvim;
-        homeDirectory =
-          if pkgs.stdenv.isLinux
-          then "/home/${username}"
-          else "/Users/${username}";
+        homeDirectory = if pkgs.stdenv.isLinux then "/home/${username}" else "/Users/${username}";
       };
   };
 }

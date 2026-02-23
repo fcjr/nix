@@ -51,9 +51,9 @@
           "foreground": "#546E7A"
         },
         {
-          "type": "nix-shell",
+          "type": "text",
           "style": "plain",
-          "template": " \uf313 Nix <#26C6DA>\ue0b3</>",
+          "template": "{{ if .Env.IN_NIX_SHELL }} \uf313 Nix <#26C6DA>\ue0b3</>{{ end }}",
           "background": "#546E7A",
           "foreground": "#26C6DA"
         },

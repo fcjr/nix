@@ -51,6 +51,13 @@
           "foreground": "#546E7A"
         },
         {
+          "type": "session",
+          "style": "plain",
+          "template": "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }} <#26C6DA>\ue0b3</>{{ end }}",
+          "background": "#546E7A",
+          "foreground": "#FF5252"
+        },
+        {
           "type": "text",
           "style": "plain",
           "template": "{{ if .Env.IN_NIX_SHELL }} \uf313 Nix <#26C6DA>\ue0b3</>{{ end }}",

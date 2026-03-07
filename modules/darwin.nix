@@ -29,7 +29,7 @@ let
     "fcjr/fcjr"
     "sst/tap"
     "atopile/tap"
-    "fastrepl/hyprnote"
+    "fastrepl/fastrepl"
     "charmbracelet/tap"
     "mobile-dev-inc/tap"
     "manaflow-ai/cmux"
@@ -169,8 +169,6 @@ let
 
     "atopile/tap/atopile"
 
-    "fastrepl/hyprnote/owhisper"
-
     "turso"
     "jj"
     "flyctl"
@@ -220,6 +218,7 @@ let
     "sonos"
     "spotify"
     "cyberduck"
+    "emdash"
 
     "1password"
     "1password-cli"
@@ -307,7 +306,7 @@ let
 
     "deskpad"
     "blackhole-2ch"
-    "fastrepl/hyprnote/hyprnote"
+    "fastrepl/fastrepl/char@nightly"
     "linear-linear"
 
     "feed-the-beast"
@@ -531,7 +530,7 @@ in
           "/Applications/Claude.app"
           "/Applications/Codex.app"
           "${pkgs.obsidian}/Applications/Obsidian.app"
-          "/Applications/Hyprnote.app"
+          "/Applications/Char Nightly.app"
           "/Applications/cmux.app"
           "/Applications/Ghostty.app"
           "/Applications/Typefully.app"

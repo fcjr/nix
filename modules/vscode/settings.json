@@ -84,7 +84,8 @@
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
     "https://biomejs.dev": true,
-    "https://ui.shadcn.com": true
+    "https://ui.shadcn.com": true,
+    "https://turborepo.dev": true
   },
   "workbench.sideBar.location": "right"
 }

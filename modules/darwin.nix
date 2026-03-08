@@ -391,6 +391,7 @@ let
     "johnpapa.vscode-cloak"
     "typespec.typespec-vscode"
     "toba.vsfire"
+    "astro-build.astro-vscode"
     "svelte.svelte-vscode"
     "expo.vscode-expo-tools"
     "davidanson.vscode-markdownlint"

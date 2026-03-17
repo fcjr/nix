@@ -5,6 +5,13 @@
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "go.toolsManagement.autoUpdate": true,
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--path-mode=abs", "--fast-only"],
+  "go.formatTool": "custom",
+  "go.alternateTools": {
+    "customFormatter": "golangci-lint"
+  },
+  "go.formatFlags": ["fmt", "--stdin"],
   "tasks.allowAutomaticTasks": "off",
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
@@ -69,6 +76,9 @@
       ".continue/**/*.yaml"
     ],
     "file:///Users/fcjr/.vscode/extensions/continue.continue-1.2.16-darwin-arm64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ],
+    "file:///Users/fcjr/.vscode/extensions/continue.continue-1.2.17-darwin-arm64/config-yaml-schema.json": [
       ".continue/**/*.yaml"
     ]
   },

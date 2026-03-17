@@ -33,6 +33,7 @@ let
     "charmbracelet/tap"
     "mobile-dev-inc/tap"
     "manaflow-ai/cmux"
+    "dmno-dev/tap"
   ];
 
   brews' = [
@@ -176,6 +177,8 @@ let
     "fontforge"
     "scrcpy"
     "yt-dlp"
+
+    "dmno-dev/tap/varlock"
   ];
 
   casks' = [
@@ -338,6 +341,7 @@ let
     "Apple Developer" = 640199958;
     "Chameleon Ultra GUI" = 6462919364;
     "Amazon Kindle" = 302584613;
+    "Keynote" = 361285480;
 
     "1Password for Safari" = 1569813296;
     "uBlock Origin Lite" = 6745342698;
@@ -525,12 +529,9 @@ in
           "/Applications/Zulip.app"
           "/Applications/TablePlus.app"
           "/Applications/Visual Studio Code.app"
-          "/Applications/Zed.app"
           "/Applications/Xcode.app"
           "/Applications/Ollama.app"
           "/Applications/Claude.app"
-          "/Applications/Codex.app"
-          "${pkgs.obsidian}/Applications/Obsidian.app"
           "/Applications/Char Nightly.app"
           "/Applications/cmux.app"
           "/Applications/Ghostty.app"

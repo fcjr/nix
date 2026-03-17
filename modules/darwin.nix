@@ -535,6 +535,7 @@ in
           "/Applications/Char Nightly.app"
           "/Applications/cmux.app"
           "/Applications/Ghostty.app"
+          "/Applications/Linear.app"
           "/Applications/Typefully.app"
           "/System/Applications/Notes.app"
           "/System/Applications/System Settings.app"

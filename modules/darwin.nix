@@ -456,7 +456,6 @@ in
       enable = true;
       maxJobs = 4;
       config = {
-        nix.settings.sandbox = false;
         virtualisation = {
           darwin-builder = {
             diskSize = 80 * 1024;

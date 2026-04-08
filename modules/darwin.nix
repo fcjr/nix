@@ -220,6 +220,7 @@ let
     "obs"
     "audacity"
     "opal-composer"
+    "elgato-stream-deck"
     "sf-symbols"
     "sonos"
     "spotify"

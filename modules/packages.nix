@@ -1,5 +1,6 @@
-{pkgs, ...}:
-with pkgs; [
+{ pkgs, ... }:
+with pkgs;
+[
   nerd-fonts.meslo-lg
   nerd-fonts.iosevka
   nerd-fonts.iosevka-term
@@ -47,7 +48,7 @@ with pkgs; [
 
   # thunderbird
 
-  (proxmark3.override {hardwarePlatformExtras = "BTADDON";})
+  (proxmark3.override { hardwarePlatformExtras = "BTADDON"; })
   chameleon-ultra-cli
 
   presenterm

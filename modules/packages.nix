@@ -74,4 +74,6 @@ with pkgs; [
   # gnuradio
   # hackrf
   # direwolf
+
+  nushell
 ]

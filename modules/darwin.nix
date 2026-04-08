@@ -34,6 +34,7 @@ let
     "mobile-dev-inc/tap"
     "manaflow-ai/cmux"
     "dmno-dev/tap"
+    "renode/tap"
   ];
 
   brews' = [
@@ -179,6 +180,8 @@ let
     "yt-dlp"
 
     "dmno-dev/tap/varlock"
+
+    "renode/tap/renode"
   ];
 
   casks' = [
@@ -258,7 +261,7 @@ let
     "wch-ch34x-usb-serial-driver"
     "serial"
 
-    # "gcc-arm-embedded"
+    "gcc-arm-embedded"
     "nordic-nrf-command-line-tools"
     "arduino-ide"
     "qflipper"

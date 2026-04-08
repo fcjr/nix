@@ -247,7 +247,6 @@ let
     "unraid-usb-creator-next"
     "balenaetcher"
     "raspberry-pi-imager"
-    "tigervnc"
     "dbngin"
     "tableplus"
     "dataflare"

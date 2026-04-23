@@ -458,17 +458,18 @@ in
 
     linux-builder = {
       enable = true;
-      maxJobs = 4;
       config = {
         virtualisation = {
           darwin-builder = {
-            diskSize = 80 * 1024;
+            diskSize = 40 * 1024; # 40GB
           };
         };
       };
+      systems = [
+        "aarch64-linux"
+      ];
     };
   };
-
   users.users.${username} = {
     home = if pkgs.stdenv.isLinux then "/home/${username}" else "/Users/${username}";
   };

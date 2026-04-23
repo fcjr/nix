@@ -431,6 +431,7 @@ let
     "samuel-pordeus.elixir-test"
     "marimo-team.vscode-marimo"
     "biomejs.biome"
+    "oxc.oxc-vscode"
   ];
 in
 {

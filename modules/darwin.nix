@@ -250,6 +250,7 @@ let
     # "proton-mail-bridge"
 
     "topaz-photo-ai"
+    "vuescan"
     "typefully"
     "warp"
 

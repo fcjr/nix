@@ -35,6 +35,7 @@ let
     "manaflow-ai/cmux"
     "dmno-dev/tap"
     "renode/tap"
+    "tinygo-org/tools"
   ];
 
   brews' = [
@@ -183,6 +184,8 @@ let
     "dmno-dev/tap/varlock"
 
     "renode/tap/renode"
+
+    "tinygo-org/tools/tinygo"
   ];
 
   casks' = [
@@ -538,6 +541,7 @@ in
           "/Applications/TablePlus.app"
           "/Applications/Visual Studio Code.app"
           "/Applications/Xcode.app"
+          "/Applications/FreeCAD.app"
           "/Applications/KiCad/KiCad.app"
           "/Applications/Ollama.app"
           "/Applications/Claude.app"

@@ -48,6 +48,7 @@
   "editor.fontFamily": "CommitMono Nerd Font Mono, monospace",
   "editor.fontSize": 15,
   "git.blame.editorDecoration.enabled": true,
+  "git.addAICoAuthor": "off",
   "C_Cpp.intelliSenseEngine": "disabled",
   "[dockercompose]": {
     "editor.insertSpaces": true,

@@ -68,7 +68,7 @@
     "phoenix-heex": "html"
   },
   "continue.enableConsole": true,
-  "continue.enableTabAutocomplete": true,
+  "continue.enableTabAutocomplete": false,
   "yaml.schemas": {
     "file:///Users/fcjr/.vscode/extensions/continue.continue-1.2.22-darwin-arm64/config-yaml-schema.json": [
       ".continue/**/*.yaml"
@@ -81,7 +81,6 @@
   "claudeCode.preferredLocation": "panel",
   "json.schemaDownload.trustedDomains": {
     "https://schemastore.azurewebsites.net/": true,
-    "https://raw.githubusercontent.com/": true,
     "https://www.schemastore.org/": true,
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
@@ -89,5 +88,6 @@
     "https://ui.shadcn.com": true,
     "https://turborepo.dev": true
   },
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "extensions.autoUpdate": false
 }

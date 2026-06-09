@@ -237,7 +237,7 @@ let
 
     "ollama-app"
     "claude"
-    "claude-code"
+    "claude-code@latest"
     "codex"
     "codex-app"
     "opencode-desktop"
@@ -297,7 +297,7 @@ let
     "slack"
     "discord"
     "zulip"
-    "halloy"
+    # "halloy"
     "zoom"
 
     "steam"

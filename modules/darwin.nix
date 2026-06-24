@@ -237,7 +237,7 @@ let
 
     "ollama-app"
     "claude"
-    "claude-code@latest"
+    # "claude-code@latest"
     "codex"
     "codex-app"
     "opencode-desktop"
@@ -245,7 +245,7 @@ let
     "msty"
     "lm-studio"
     "superwhisper"
-    "comfyui"
+    "comfy"
 
     # "proton-mail-bridge"
 
@@ -320,7 +320,7 @@ let
     "deskpad"
     "blackhole-2ch"
     "fastrepl/fastrepl/char@nightly"
-    "linear-linear"
+    "linear"
 
     "feed-the-beast"
 
@@ -546,7 +546,7 @@ in
           "/Applications/KiCad/KiCad.app"
           "/Applications/Ollama.app"
           "/Applications/Claude.app"
-          "/Applications/T3 Code (Alpha).app"
+          # "/Applications/T3 Code (Alpha).app"
           "/Applications/Char Nightly.app"
           "/Applications/cmux.app"
           "/Applications/Ghostty.app"

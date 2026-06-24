@@ -18,6 +18,7 @@
         ANDROID_NDK_HOME = "/opt/homebrew/share/android-ndk";
         NDK_HOME = "$ANDROID_NDK_HOME";
         NEXT_TELEMETRY_DISABLED = "1";
+        GOPRIVATE = "gitea.app.monadical.io/*";
         HOMEBREW_NO_ANALYTICS = "1";
         LIMA_SSH_PORT_FORWARDER = "false"; # enables udp port forwarding in colima
         JAVA_HOME = "${pkgs.jdk25}";

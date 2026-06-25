@@ -163,6 +163,7 @@ let
     "sst/tap/opencode"
     "charmbracelet/tap/crush"
     "slides"
+    "agent-browser"
 
     # Embedded Rust
     "ninja"

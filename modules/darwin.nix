@@ -46,6 +46,7 @@ let
       # is released (post 0.8.1).
     }
     "rbenv"
+    "opam"
     "mas"
     "sqlc"
     "readline"
@@ -91,6 +92,9 @@ let
     "liquid-dsp"
     "libbladerf"
     "uhd"
+    "cyme"
+    "tio"
+    "picotool"
 
     "nsis"
     "upx"
@@ -332,6 +336,8 @@ let
 
     "manaflow-ai/cmux/cmux"
     "helium-browser"
+
+    "minecraft"
   ];
   masApps' = {
     "Amphetamine" = 937984704;
@@ -353,6 +359,7 @@ let
     "Chameleon Ultra GUI" = 6462919364;
     "Amazon Kindle" = 302584613;
     "Keynote" = 361285480;
+    "Pages" = 361309726;
 
     "1Password for Safari" = 1569813296;
     "uBlock Origin Lite" = 6745342698;

@@ -83,7 +83,6 @@ let
     "cloudflared"
     "zx"
     "fcjr/fcjr/git-vibe"
-    "fcjr/fcjr/grumble"
     "duckdb"
     "elixir"
     "gleam"
@@ -330,6 +329,7 @@ let
     "blackhole-2ch"
     "fastrepl/fastrepl/char@nightly"
     "linear"
+    "fcjr/fcjr/grumble"
 
     "feed-the-beast"
 

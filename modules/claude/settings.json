@@ -5,6 +5,7 @@
       "mcp__pencil"
     ]
   },
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "Stop": [
       {
@@ -44,10 +45,10 @@
       }
     }
   },
+  "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
   "feedbackSurveyState": {
     "lastShownTime": 1754103871756
-  },
-  "tui": "fullscreen"
+  }
 }

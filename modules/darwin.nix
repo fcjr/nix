@@ -36,6 +36,7 @@ let
     "dmno-dev/tap"
     "renode/tap"
     "tinygo-org/tools"
+    "blacktop/tap"
   ];
 
   brews' = [
@@ -82,6 +83,7 @@ let
     "cloudflared"
     "zx"
     "fcjr/fcjr/git-vibe"
+    "fcjr/fcjr/grumble"
     "duckdb"
     "elixir"
     "gleam"
@@ -95,6 +97,7 @@ let
     "cyme"
     "tio"
     "picotool"
+    "blacktop/tap/ipsw"
 
     "nsis"
     "upx"
@@ -251,6 +254,7 @@ let
     "lm-studio"
     "superwhisper"
     "comfy"
+    "open-design"
 
     # "proton-mail-bridge"
 

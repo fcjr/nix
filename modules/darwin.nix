@@ -331,6 +331,8 @@ let
     "fastrepl/fastrepl/char@nightly"
     "linear"
     "fcjr/fcjr/grumble"
+    "fcjr/fcjr/restorekit"
+    "fcjr/fcjr/restorekit-cli"
 
     "feed-the-beast"
 
@@ -502,9 +504,6 @@ in
     taps = taps';
     brews = brews';
     casks = casks';
-    caskArgs = {
-      no_quarantine = true;
-    };
     masApps = masApps';
     vscode = vscode';
     onActivation = {
